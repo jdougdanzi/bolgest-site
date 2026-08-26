@@ -1,0 +1,8 @@
+# Bolgest — o site estático manda: index.html antes de qualquer index.php do Horizons
+DirectoryIndex index.html index.php
+Options -Indexes
+
+# URLs limpas exigidas pelo briefing e pela Google Play
+RewriteEngine On
+RewriteRule ^privacidade/?$ privacidade.html [L]
+RewriteRule ^termos/?$ termos.html [L]
