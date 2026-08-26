@@ -1,438 +1,561 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bolgest: gestão de bolso com contador de verdade</title>
-<meta name="description" content="Contabilidade inclusa na assinatura: DAS, nota fiscal e dinheiro em dia, do MEI ao produtor rural. Um escritório contábil de verdade, no seu celular. 30 dias grátis.">
+<meta name="description" content="Contabilidade inclusa na assinatura: DAS, nota fiscal e o seu lucro na tela todo dia, do MEI à prestadora de serviços. Contador de verdade, 30 dias grátis.">
 <link rel="canonical" href="https://bolgest.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bolgest: gestão de bolso com contador de verdade">
-<meta property="og:description" content="Contabilidade inclusa na assinatura, do MEI à prestadora de serviços. 30 dias grátis pra testar.">
+<meta property="og:description" content="Quanto sobrou pra você este mês? Contabilidade inclusa, contador de verdade, 30 dias grátis.">
 <meta property="og:url" content="https://bolgest.com/">
 <meta property="og:locale" content="pt_BR">
-<meta name="twitter:card" content="summary">
-<link rel="icon" type="image/png" href="assets/favicon-64.png">
-<link rel="apple-touch-icon" href="assets/icon-192.png">
 <meta property="og:image" content="https://bolgest.com/assets/icon-512.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@400;600;700&display=swap">
-
-<!-- ═══ GA4 · tarefa 2.2.3: troque o ID abaixo pelo real e o script ativa sozinho ═══ -->
+<meta name="twitter:card" content="summary">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<!-- GA4 · troque o ID e o script ativa sozinho -->
 <script>
 var GA_ID='G-XXXXXXXXXX';
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
 if(!/X{4}/.test(GA_ID)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID);}
-function track(ev,params){try{gtag('event',ev,params||{})}catch(e){}}
+document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;
+ if(/play\.google/.test(a.href))try{gtag('event','cta_play',{pagina:location.pathname})}catch(x){}
+ if(/wa\.me/.test(a.href))try{gtag('event','cta_whatsapp',{pagina:location.pathname})}catch(x){}});
 </script>
-<!-- Meta Pixel: inserir aqui quando a conta de ads existir -->
-
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"AccountingService","name":"Bolgest","url":"https://bolgest.com","email":"falecom@bolgest.com","telephone":"+55-27-98881-8576",
   "parentOrganization":{"@type":"Organization","name":"Danzi & Ribeiro Contadores Associados LTDA","taxID":"10.520.819/0001-33"},
-  "address":{"@type":"PostalAddress","addressLocality":"Cachoeiro de Itapemirim","addressRegion":"ES","addressCountry":"BR"},
+  "address":{"@type":"PostalAddress","streetAddress":"Rua Rafael Dias Pacheco, 159, Sala A, Recanto","addressLocality":"Cachoeiro de Itapemirim","addressRegion":"ES","postalCode":"29303-120","addressCountry":"BR"},
   "slogan":"Gestão de bolso com contador de verdade"},
  {"@type":"SoftwareApplication","name":"Bolgest","operatingSystem":"Android","applicationCategory":"FinanceApplication",
   "installUrl":"https://play.google.com/store/apps/details?id=app.pjmei.bolgest",
-  "offers":[
-   {"@type":"Offer","name":"MEI","price":"49.90","priceCurrency":"BRL"},
-   {"@type":"Offer","name":"MEI com empregado","price":"99.90","priceCurrency":"BRL"},
-   {"@type":"Offer","name":"Autônomo","price":"159.90","priceCurrency":"BRL"},
-   {"@type":"Offer","name":"Produtor Rural","price":"199.00","priceCurrency":"BRL"},
-   {"@type":"Offer","name":"Prestador de Serviço","price":"258.00","priceCurrency":"BRL"}]},
- {"@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Atrasei o DAS. E agora?","acceptedAnswer":{"@type":"Answer","text":"Dá pra resolver: o app emite a guia atualizada com os acréscimos e você quita na hora. E o Bolgest te lembra dos próximos pra não acontecer de novo."}},
-  {"@type":"Question","name":"O que é a DASN e quando preciso entregar?","acceptedAnswer":{"@type":"Answer","text":"É a declaração anual obrigatória do MEI. Pelo app, você entrega em minutos e recebe o lembrete antes do prazo."}},
-  {"@type":"Question","name":"Como sei se meu CNPJ está regular?","acceptedAnswer":{"@type":"Answer","text":"O Bolgest consulta sua situação na Receita e te avisa se algo precisar de atenção."}},
-  {"@type":"Question","name":"MEI é obrigado a emitir nota fiscal?","acceptedAnswer":{"@type":"Answer","text":"Pra empresa, sim; pra pessoa física, em regra não. No app você emite a NFS-e no padrão nacional quando precisar."}},
-  {"@type":"Question","name":"Quanto custa o Bolgest?","acceptedAnswer":{"@type":"Answer","text":"Os planos começam em R$ 49,90 por mês, com a contabilidade inclusa, e todo novo cliente tem 30 dias grátis pra testar."}}]}
-]}
+  "offers":[{"@type":"Offer","name":"MEI","price":"49.90","priceCurrency":"BRL"},{"@type":"Offer","name":"MEI com empregado","price":"99.90","priceCurrency":"BRL"},{"@type":"Offer","name":"Autônomo","price":"159.90","priceCurrency":"BRL"},{"@type":"Offer","name":"Produtor Rural","price":"199.00","priceCurrency":"BRL"},{"@type":"Offer","name":"Prestador de Serviço","price":"258.00","priceCurrency":"BRL"}]}]}
 </script>
-
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=IBM+Plex+Mono:wght@500;600&family=Montserrat:wght@800&family=Poppins:wght@400;600;700&display=swap">
 <style>
-:root{--verde:#38E700;--sust:#65B20A;--verdetx:#3f7a06;--ink:#14210f;--sub:#57654f;--bg:#ffffff;--soft:#f5faf1;--line:#e3ecdf;--escuro:#0c2200}
+:root{--verde:#38E700;--sust:#65B20A;--verdetx:#3f7a06;--lucro:#1d8a06;--vazio:#c2410c;--ink:#0c2200;--papel:#faf7ef;--creme:#f2eee2;--sub:#5c6b52}
 *{margin:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
-h1,h2,h3{font-family:Montserrat,Poppins,sans-serif;font-weight:800;line-height:1.12;letter-spacing:-.01em}
-h2{font-size:clamp(1.55rem,4vw,2.2rem);margin-bottom:10px}
-a{color:var(--verdetx)}
-:focus-visible{outline:3px solid var(--verde);outline-offset:2px;border-radius:4px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-.kicker{color:var(--verdetx);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
-.sub{color:var(--sub);max-width:640px}
-section{padding:64px 0}
-.chip{display:inline-flex;align-items:center;gap:6px;background:#e9fbdc;color:#1d6606;font-weight:700;font-size:.78rem;padding:6px 14px;border-radius:999px}
+body{font-family:Poppins,sans-serif;background:var(--papel);color:var(--ink);line-height:1.65}
+h1,h2,h3{font-family:Montserrat,sans-serif;font-weight:800;line-height:1.15;letter-spacing:-.01em}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+a{text-decoration:none}
+.marca{background:linear-gradient(transparent 58%,#b9f58e 58%);padding:0 2px}
+.hand{font-family:Caveat,cursive;color:var(--sust)}
+.mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
 /* header */
-header{position:sticky;top:0;background:#ffffffee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:60}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1080px;margin:0 auto}
-.logo{display:flex;align-items:center;gap:9px;font-family:Montserrat,sans-serif;font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--ink)}
-.logo svg{width:34px;height:34px;flex-shrink:0}
-.logo span{color:var(--verdetx)}
-.nav .links{display:flex;gap:22px;align-items:center;font-size:.88rem}
-.nav .links a{text-decoration:none;color:var(--sub);font-weight:600}
-.nav a.cta{background:var(--verde);color:var(--escuro);font-weight:700;padding:10px 18px;border-radius:10px;text-decoration:none}
-@media(max-width:760px){.nav .links a:not(.cta){display:none}}
-/* hero */
-.hero{background:radial-gradient(80% 100% at 20% 0%,#effbe6 0%,#ffffff 70%);padding:68px 0 40px}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
-@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}}
-.hero h1{font-size:clamp(2rem,6vw,3.2rem);margin:14px 0}
-.hero h1 em{font-style:normal;color:var(--verdetx)}
-.badges{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-.store{display:inline-flex;flex-direction:column;justify-content:center;padding:11px 22px;border-radius:12px;text-decoration:none;line-height:1.2}
-.store small{font-size:.63rem;opacity:.85}
-.store b{font-size:1.02rem}
-.store.play{background:var(--escuro);color:#fff}
-.store.whats{background:#fff;border:2px solid var(--sust);color:var(--verdetx)}
-.store.apple{background:#eef3ec;color:var(--sub);cursor:default}
-/* phone */
-.phone{width:252px;margin:0 auto;background:var(--escuro);border-radius:34px;padding:12px;box-shadow:0 28px 64px rgba(20,40,10,.18)}
-.screen{background:#fff;border-radius:24px;overflow:hidden;font-size:.68rem}
-.scr-top{background:var(--verde);color:var(--escuro);padding:14px 14px 10px;font-weight:700}
-.scr-top small{display:block;font-weight:400;font-size:.6rem;opacity:.75}
-.row{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid #f0f4ee}
-.row b{font-size:.7rem}
-.ok{color:#1d8a06;font-weight:700}
-.warn{color:#b45309;font-weight:700}
-.scr-cta{margin:10px 14px 14px;background:var(--verde);color:var(--escuro);text-align:center;font-weight:700;border-radius:9px;padding:8px}
-/* trust bar */
-.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
-.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:18px 20px}
-@media(max-width:760px){.trust .wrap{grid-template-columns:repeat(2,1fr)}}
-.trust div{font-size:.78rem;color:var(--sub);display:flex;gap:8px;align-items:flex-start}
-.trust b{color:var(--ink)}
-.trust .tic{color:var(--verdetx);font-weight:800}
-/* cards */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-@media(max-width:760px){.grid3{grid-template-columns:1fr}}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
-.card h3{font-size:1.02rem;margin-bottom:8px}
-.card p{color:var(--sub);font-size:.92rem}
-.icone{width:42px;height:42px;border-radius:12px;background:#e9fbdc;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}
-.soft{background:var(--soft)}
-/* passos */
-.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
-@media(max-width:760px){.passos{grid-template-columns:1fr}}
-.passo{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
-.passo .num{font-family:Montserrat,sans-serif;font-size:2rem;font-weight:800;color:var(--verde);-webkit-text-stroke:1px var(--verdetx);line-height:1}
-.passo h3{font-size:1rem;margin:10px 0 6px}
-.passo p{color:var(--sub);font-size:.9rem}
-/* diferencial */
-.dif{background:var(--escuro);color:#fff;border-radius:24px;padding:52px 40px}
-@media(max-width:640px){.dif{padding:36px 24px}}
-.dif h2{color:#fff}
-.dif .kicker{color:var(--verde)}
-.dif p{color:#cfe0c6;max-width:720px;margin-top:12px}
-.dif strong{color:var(--verde)}
-/* comparativo */
-.tw{overflow-x:auto;margin-top:28px;border:1px solid var(--line);border-radius:16px}
-table.comp{border-collapse:collapse;width:100%;font-size:.86rem;min-width:640px;background:#fff}
-.comp th,.comp td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line)}
-.comp th{font-size:.8rem}
-.comp td:first-child,.comp th:first-child{text-align:left;font-weight:600}
-.comp .best{background:#f2fce9;font-weight:700}
-.comp thead .best{background:var(--verde);color:var(--escuro);border-radius:0}
-.comp .x{color:#c2410c}
-.comp .v{color:var(--verdetx);font-weight:800}
-/* planos */
-.planos-head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
-.gridp{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
-@media(max-width:980px){.gridp{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.gridp{grid-template-columns:1fr}}
-.plano{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;position:relative}
-.plano.destaque{border:2px solid var(--verde);box-shadow:0 14px 36px rgba(56,231,0,.14)}
-.maisvendido{position:absolute;top:-11px;left:20px;background:var(--verde);color:var(--escuro);font-size:.66rem;font-weight:800;padding:3px 12px;border-radius:999px}
-.plano .selo{align-self:flex-start;background:#e9fbdc;color:#1d6606;font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+header{position:sticky;top:0;background:#faf7efe8;backdrop-filter:blur(8px);z-index:50}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;max-width:1020px;margin:0 auto}
+.nav .lg{display:flex;align-items:center;gap:9px;font-family:Montserrat,sans-serif;font-weight:800;font-size:1.3rem;color:var(--ink);letter-spacing:-.01em}
+.nav .lgimg{height:38px;display:block}
+@media(max-width:640px){.nav .lgimg{height:26px}.nav .btn{padding:10px 16px;font-size:.8rem;white-space:nowrap}}
+.nav .lg span{color:var(--sust)}
+.btn{display:inline-block;background:var(--verde);color:#123300;font-weight:700;padding:13px 26px;border-radius:99px;box-shadow:0 6px 0 #4d8a06;transition:.12s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #4d8a06}
+.btn.soft{background:#fff;color:var(--sust);box-shadow:0 6px 0 #ddd6c2}
+/* 1 · HERO */
+.hero{padding:64px 0 60px;position:relative;overflow:hidden;text-align:center}
+.blob{position:absolute;border-radius:50% 42% 55% 45%/45% 55% 42% 55%;background:#e4f8d2;z-index:-1}
+.b1{width:440px;height:440px;top:-150px;left:-130px}
+.b2{width:360px;height:360px;bottom:-180px;right:-110px;background:#eef8dd}
+.hero .selo{display:inline-block;background:#fff;border:2px solid #b9f58e;border-radius:99px;padding:6px 18px;font-weight:600;font-size:.85rem;margin-bottom:14px}
+.hero h1{font-size:clamp(2.2rem,6vw,3.6rem);max-width:720px;margin:0 auto 14px}
+.hero .sub{color:var(--sub);max-width:520px;margin:0 auto 28px}
+/* card SOBROU — folha de caderno */
+.sobrou{max-width:420px;margin:40px auto 0;background:#fff;border-radius:6px 22px 22px 22px;padding:26px 26px 20px;box-shadow:0 18px 44px #0c22001c;transform:rotate(-1.2deg);position:relative;
+background-image:repeating-linear-gradient(#fff 0 27px,#eef2e6 27px 28px)}
+.clipe-svg{position:absolute;top:-16px;left:24px;width:34px;height:34px;stroke:var(--ink);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.sobrou .lbl{font-family:Caveat,cursive;color:var(--sust);font-size:1.25rem}
+.sobrou .v{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:clamp(2rem,6vw,2.7rem);color:var(--lucro);line-height:1.15;margin:4px 0 2px}
+.sobrou .d{font-size:.85rem;color:var(--lucro);font-weight:700}
+.sobrou .mini{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:12px;font-size:.75rem;color:var(--sub)}
+.sobrou .mini b{font-family:"IBM Plex Mono",monospace;color:var(--ink);font-weight:600}
+.hero .rab{display:inline-block;margin-top:18px}
+/* seções */
+section{padding:58px 0}
+h2.t{font-size:clamp(1.6rem,4.5vw,2.3rem);text-align:center;margin-bottom:8px}
+.sub2{text-align:center;color:var(--sub);margin-bottom:34px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:760px){.g3{grid-template-columns:1fr}}
+/* 2 · vazamentos como post-its de alerta */
+.vaza{background:#fdf0e6;border-radius:4px 22px 4px 22px;padding:24px;box-shadow:0 10px 24px #0c220014}
+.vaza:nth-child(1){transform:rotate(-1.4deg)}
+.vaza:nth-child(2){transform:rotate(1deg);background:#fdeae0}
+.vaza:nth-child(3){transform:rotate(-.7deg)}
+.vaza .n{font-family:Caveat,cursive;color:var(--vazio);font-size:1.2rem;display:block}
+.vaza h3{font-size:1rem;margin:2px 0 6px}
+.vaza p{font-size:.88rem;color:#7a5a44}
+/* 3 · conta viva — página de caderno pautado */
+.conta{background:#fff;border-radius:26px;padding:40px 26px;box-shadow:0 16px 40px #0c220014;text-align:center;
+background-image:repeating-linear-gradient(#fff 0 31px,#eef2e6 31px 32px)}
+.conta .lbl{font-family:Caveat,cursive;color:var(--sust);font-size:1.4rem}
+.conta .eq{display:flex;justify-content:center;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:14px;font-family:"IBM Plex Mono",monospace;font-weight:600}
+.conta .t2{font-size:.66rem;display:block;color:var(--sub);font-family:Poppins;font-weight:600;letter-spacing:.08em}
+.conta b{font-size:1.2rem;font-weight:600}
+.conta .fim b{color:var(--lucro);font-size:1.7rem}
+.conta .op{color:var(--sub);font-size:1.2rem}
+.conta p{color:var(--sub);font-size:.88rem;margin-top:14px}
+/* 4 · mecanismos: cards brancos da C */
+.mec{background:#fff;border-radius:22px;padding:26px;box-shadow:0 12px 30px #0c220012;text-align:center}
+.mec .emoji{font-size:2.2rem;display:block;margin-bottom:10px}
+.mec h3{font-size:1rem;margin-bottom:6px}
+.mec p{font-size:.88rem;color:var(--sub)}
+/* 5 · guardião: bloco creme da C */
+.dif{background:var(--creme);border-radius:34px;padding:52px 40px;text-align:center}
+@media(max-width:640px){.dif{padding:38px 22px}}
+.dif h2{font-size:clamp(1.6rem,4.5vw,2.3rem);margin-bottom:12px}
+.dif p{max-width:620px;margin:0 auto;color:#4d5b44}
+.dif .hand{display:block;margin-top:16px;font-size:1.35rem}
+.chk{max-width:440px;margin:24px auto 0;background:#fff;border-radius:18px;padding:20px 24px;box-shadow:0 12px 30px #0c220010;font-size:.88rem;text-align:left}
+.chk div{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #e5e8df}
+.chk div:last-child{border:none}
+.chk b{color:var(--lucro)}
+/* 6 · prova: post-its com números */
+.post{background:#fdfae1;border-radius:4px 22px 4px 22px;padding:24px;box-shadow:0 10px 24px #0c220014;font-family:Caveat,cursive;font-size:1.4rem;line-height:1.28;color:#3d4a34}
+.post .r{font-family:"IBM Plex Mono",monospace;font-size:1rem;font-weight:600;color:var(--lucro);background:#eaf8db;border-radius:6px;padding:0 6px}
+.post .r.mau{color:var(--vazio);background:#fdeae0}
+.post small{display:block;font-family:Poppins;font-size:.72rem;margin-top:12px;color:#8a9578}
+.post:nth-child(1){transform:rotate(-1.6deg)}
+.post:nth-child(2){transform:rotate(1.2deg);background:#eaf8db}
+.post:nth-child(3){transform:rotate(-.8deg)}
+/* 7 · planos ancorados */
+.gp{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:960px){.gp{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.gp{grid-template-columns:1fr}}
+.plano{background:#fff;border-radius:22px;padding:26px;box-shadow:0 12px 30px #0c220010;display:flex;flex-direction:column;position:relative;text-align:left}
+.plano.hot{outline:3px solid var(--verde);outline-offset:-3px}
+.plano .best{position:absolute;top:-14px;left:22px;background:var(--verde);color:#123300;font-size:.68rem;font-weight:800;padding:4px 14px;border-radius:99px}
 .plano h3{font-size:1.02rem}
-.plano .tag{color:var(--sub);font-size:.8rem;margin:2px 0 12px;min-height:2.4em}
-.preco{font-family:Montserrat,sans-serif;font-size:1.7rem;font-weight:800}
+.plano .anc{font-family:Caveat,cursive;color:var(--vazio);font-size:1.2rem;margin:2px 0 10px;display:block;line-height:1.2}
+.preco{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:1.7rem}
 .preco small{font-family:Poppins;font-size:.78rem;color:var(--sub);font-weight:400}
-.plano ul{list-style:none;margin:14px 0 18px;padding:0;font-size:.84rem;color:var(--sub)}
-.plano li{padding:4px 0 4px 22px;position:relative}
-.plano li::before{content:"✓";position:absolute;left:0;color:var(--verdetx);font-weight:700}
-.plano a.btn{margin-top:auto;text-align:center;background:var(--verde);color:var(--escuro);font-weight:700;padding:12px;border-radius:10px;text-decoration:none;font-size:.9rem}
-.plano a.btn.outline{background:#fff;border:2px solid var(--sust);color:var(--verdetx)}
-.rural-nota{font-size:.7rem;color:#b45309;font-weight:600;margin-top:8px}
-.ancora{margin-top:18px;font-size:.85rem;color:var(--sub)}
-.fidelidade{margin-top:16px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--sust);border-radius:0 12px 12px 0;padding:14px 18px;font-size:.88rem}
-/* depoimentos */
-.dep{display:flex;gap:12px;align-items:flex-start}
-.avatar{width:44px;height:44px;border-radius:50%;background:var(--sust);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
-.dep small{color:var(--sub)}
-/* FAQ */
-details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-top:10px}
+.plano ul{list-style:none;margin:14px 0 20px;padding:0;font-size:.86rem;color:var(--sub)}
+.plano li{padding:4px 0 4px 24px;position:relative}
+.plano li::before{content:"";position:absolute;left:0;top:6px;width:15px;height:15px;background:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22 fill=%22none%22 stroke=%22%2365B20A%22 stroke-width=%222.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M24 42V24%22/%3E%3Cpath d=%22M24 26c-1-7-5.5-10.5-11-10 .8 6.5 5 10.3 11 10z%22/%3E%3Cpath d=%22M24 21c.5-7 5-11.5 11-11.5-.3 7-4.5 11.5-11 11.5z%22/%3E%3C/svg%3E') no-repeat center/contain}
+.plano .btn{margin-top:auto;text-align:center;padding:12px}
+.fid{margin-top:26px;background:#fff;border-radius:16px;padding:16px 22px;font-size:.85rem;color:#4d5b44;box-shadow:0 8px 20px #0c22000d}
+/* 8 · confiança */
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:820px){.seg{grid-template-columns:repeat(2,1fr)}}
+.s{background:#fff;border-radius:18px;padding:20px;font-size:.83rem;box-shadow:0 10px 24px #0c22000d}
+.s b{display:block;margin-bottom:4px}
+.s span{color:var(--sub)}
+/* 9 · faq + cta */
+details{background:#fff;border-radius:16px;padding:16px 22px;margin:12px auto 0;box-shadow:0 8px 20px #0c22000d;max-width:760px}
 summary{font-weight:700;cursor:pointer;font-size:.95rem}
-details p{color:var(--sub);margin-top:10px;font-size:.92rem}
-/* cta final */
-.final{background:linear-gradient(135deg,#e9fbdc,#f7fdf2);text-align:center;border-radius:24px;padding:56px 24px}
-.final h2{max-width:560px;margin:0 auto 6px}
-.final .badges{justify-content:center}
-/* footer */
-footer{border-top:1px solid var(--line);padding:40px 0 110px;font-size:.82rem;color:var(--sub)}
-footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
-@media(max-width:640px){footer .wrap{grid-template-columns:1fr}}
-footer a{text-decoration:none}
-footer h4{color:var(--ink);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
-.legal{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:.74rem}
-/* flutuantes */
-.zap{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.22);z-index:70;text-decoration:none}
-.zap svg{width:28px;height:28px;fill:#fff}
-.stickybar{display:none}
-@media(max-width:760px){
- .zap{bottom:76px}
- .stickybar{display:flex;position:fixed;left:0;right:0;bottom:0;background:#fffffff2;border-top:1px solid var(--line);padding:10px 14px;gap:10px;z-index:65;backdrop-filter:blur(8px)}
- .stickybar a{flex:1;text-align:center;font-weight:700;font-size:.88rem;padding:12px;border-radius:10px;text-decoration:none}
- .stickybar .p{background:var(--verde);color:var(--escuro)}
-}
+details p{color:var(--sub);margin-top:8px;font-size:.9rem}
+.final{background:var(--creme);border-radius:34px;padding:52px 26px;text-align:center;margin-top:40px}
+.final h2{font-size:clamp(1.6rem,4.5vw,2.2rem);margin-bottom:8px}
+.final .hand{font-size:1.4rem;display:block;margin-bottom:22px}
+footer{padding:38px 0 30px;font-size:.8rem;color:var(--sub);text-align:center}
+footer img{height:30px;margin-bottom:8px}
+footer a{color:var(--sust)}
+@media (prefers-reduced-motion:no-preference){.sobrou{animation:sobe .7s ease-out}@keyframes sobe{from{opacity:0;transform:rotate(-1.2deg) translateY(14px)}to{opacity:1;transform:rotate(-1.2deg)}}}
+
+/* seletor de perfil no caderno (M) */
+.perfis{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:26px}
+.pf{border:none;background:#fff;border-radius:99px;padding:11px 20px;font-family:Poppins;font-weight:600;font-size:.88rem;cursor:pointer;color:var(--ink);box-shadow:0 4px 0 #ddd6c2;transition:.12s}
+.pf:hover{transform:translateY(1px);box-shadow:0 3px 0 #ddd6c2}
+.pf.on{background:var(--verde);color:#123300;box-shadow:0 4px 0 #4d8a06}
+.painel{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;background:#fff;border-radius:26px;padding:34px;box-shadow:0 18px 44px #0c220014;outline:3px solid var(--verde);outline-offset:-3px}
+@media(max-width:820px){.painel{grid-template-columns:1fr;padding:26px 22px}}
+.painel h3{font-size:1.5rem}
+.painel .anc2{font-family:Caveat,cursive;color:var(--vazio);font-size:1.35rem;display:block;margin:2px 0 14px;line-height:1.2}
+.painel ul{list-style:none;margin:0;padding:0;font-size:.9rem;color:var(--sub)}
+.painel li{padding:5px 0 5px 24px;position:relative}
+.painel li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:15px;background:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 48 48%22 fill=%22none%22 stroke=%22%2365B20A%22 stroke-width=%222.8%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M24 42V24%22/%3E%3Cpath d=%22M24 26c-1-7-5.5-10.5-11-10 .8 6.5 5 10.3 11 10z%22/%3E%3Cpath d=%22M24 21c.5-7 5-11.5 11-11.5-.3 7-4.5 11.5-11 11.5z%22/%3E%3C/svg%3E') no-repeat center/contain}
+.caixa{background:var(--papel);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.caixa .tot{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:2rem}
+.caixa .tot small{font-family:Poppins;font-size:.8rem;color:var(--sub);font-weight:400}
+.assist{display:flex;gap:10px;align-items:flex-start;font-size:.82rem;color:var(--sub);cursor:pointer;user-select:none}
+.assist input{margin-top:4px;accent-color:var(--sust);width:16px;height:16px}
+.assist b{color:var(--ink)}
+.caixa .btn{text-align:center}
+.caixa .teste{font-family:Caveat,cursive;color:var(--sust);font-size:1.2rem;text-align:center}
+.cmp-wrap{margin-top:22px;background:#fff;border-radius:18px;padding:16px 22px;box-shadow:0 8px 20px #0c22000d}
+.cmp-wrap summary{font-weight:700;cursor:pointer;font-size:.92rem}
+.tw{overflow-x:auto;margin-top:12px}
+table.cmp{border-collapse:collapse;width:100%;font-size:.83rem;min-width:540px}
+.cmp th,.cmp td{padding:10px 12px;border-bottom:1px dashed #e5e8df;text-align:left}
+.cmp th{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--sub)}
+.cmp td.p{font-family:"IBM Plex Mono",monospace;font-weight:600;white-space:nowrap}
+/* rodapé corporativo (M) */
+.rodape{background:#0c2200;color:#cfd8c6;margin-top:50px;padding:52px 0 0;font-size:.85rem}
+.rodape a{color:#b9f58e}
+.rodape .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;max-width:1020px;margin:0 auto;padding:0 20px}
+@media(max-width:860px){.rodape .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){.rodape .cols{grid-template-columns:1fr}}
+.rodape h4{color:#fff;font-family:Poppins;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:12px;font-weight:700}
+.rodape p{margin-bottom:8px}
+.rodape ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:7px}
+.rodape .marcaft img{height:34px;margin-bottom:12px;filter:brightness(0) invert(1)}
+.lojas{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:14px}
+.loja{display:inline-flex;align-items:center;gap:10px;background:#081a04;border:1px solid #2e4420;border-radius:12px;padding:8px 16px;color:#fff;min-width:170px;justify-content:flex-start}
+.loja svg{width:22px;height:22px;flex-shrink:0}
+.loja small{display:block;font-size:.58rem;opacity:.75;line-height:1.1}
+.loja b{font-size:.9rem;line-height:1.15}
+.loja.off{opacity:.55;cursor:default}
+.redes{display:flex;gap:10px;margin-top:12px;justify-content:center}
+@media(max-width:860px){.rodape .cols > div{text-align:center}.rodape ul{display:inline-flex;flex-direction:column;gap:7px}}
+.rede{width:38px;height:38px;border-radius:50%;background:#31402a;display:flex;align-items:center;justify-content:center;transition:.15s}
+.rede:hover{background:var(--sust)}
+.rede svg{width:18px;height:18px;fill:#fff}
+.rodape .base{border-top:1px solid #2e4420;margin-top:40px;padding:18px 20px;text-align:center;font-size:.75rem;color:#8fa080}
+
+/* versão N: ícones doodle + marcas Tabler */
+.dico{width:46px;height:46px;stroke:var(--ink);fill:none;stroke-width:2.3;stroke-linecap:round;stroke-linejoin:round;display:block;margin:0 auto 10px}
+.mec .dico{stroke:var(--verdetx)}
+.s .dico{width:30px;height:30px;margin:0 0 8px;stroke:var(--ink)}
+.rede svg{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.loja svg{fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.selo .dico{display:inline-block;width:20px;height:20px;vertical-align:-4px;margin:0 6px 0 0;stroke-width:2.6}
+.ico-in{display:inline-block;width:19px;height:19px;vertical-align:-4px;margin-right:4px;stroke:var(--verdetx);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* botão flutuante do WhatsApp */
+.zap{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 0 #128C4B,0 14px 30px #0c220033;z-index:70;transition:.12s}
+.zap:hover{transform:translateY(2px);box-shadow:0 4px 0 #128C4B,0 10px 24px #0c220033}
+.zap svg{width:32px;height:32px;fill:#fff;stroke:none}
+.zap .balao{position:absolute;right:66px;background:#fff;color:var(--ink);font-family:Caveat,cursive;font-size:1.15rem;white-space:nowrap;padding:6px 14px;border-radius:14px 14px 4px 14px;box-shadow:0 8px 20px #0c22001f;opacity:0;transform:translateX(6px);transition:.2s;pointer-events:none}
+.zap:hover .balao{opacity:1;transform:none}
+@media(max-width:640px){.zap .balao{display:none}}
+</style>
+<style>
+.rdp{background:#0c2200;color:#cfd8c6;padding:52px 0 0;margin-top:56px;font-size:.85rem;text-align:left;line-height:1.7}
+.rdp a{color:#b9f58e;text-decoration:none}
+.rdp a:hover{text-decoration:underline}
+.rdp-cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;max-width:1020px;margin:0 auto;padding:0 22px 40px}
+@media(max-width:880px){.rdp-cols{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.rdp-cols{grid-template-columns:1fr;text-align:center}.rdp-redes,.rdp-lojas{justify-content:center}.rdp ul{align-items:center}}
+.rdp h4{color:#fff;font-family:Poppins,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+.rdp h4+h4, .rdp ul+h4, .rdp p+h4, .rdp div+h4{margin-top:20px}
+.rdp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.rdp p{margin:0 0 8px}
+.rdp-marca img{height:32px;filter:brightness(0) invert(1);margin-bottom:12px;display:inline-block}
+.rdp-lojas{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.rdp-loja{display:inline-flex;align-items:center;gap:9px;background:#081a04;border:1px solid #2e4420;border-radius:11px;padding:7px 14px;color:#fff;min-width:158px}
+.rdp-loja svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.rdp-loja small{display:block;font-size:.56rem;opacity:.75;line-height:1.1;letter-spacing:.06em}
+.rdp-loja b{font-size:.86rem;line-height:1.15}
+.rdp-loja.off{opacity:.55}
+.rdp-redes{display:flex;gap:10px;margin-top:4px}
+.rdp-rede{width:36px;height:36px;border-radius:50%;background:#24401a;display:flex;align-items:center;justify-content:center;transition:.15s}
+.rdp-rede:hover{background:#65B20A}
+.rdp-rede svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rdp-prof{border-top:1px solid #24401a;text-align:center;padding:16px 22px}
+.rdp-base{border-top:1px solid #24401a;text-align:center;padding:16px 22px 20px;font-size:.73rem;color:#8fa080}
 </style>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<!-- doodles autorais estilo caderno (traço irregular de caneta) -->
+<symbol id="d-calc" viewBox="0 0 48 48"><rect x="9.5" y="6" width="28" height="36" rx="4" transform="rotate(-2 24 24)"/><path d="M15 13.5c5-1 13-1 18 .5"/><path d="M16 24h3.5M16 31h3.5M16 38h3.5"/><path d="M25 23.5h3.5M25 30.5h3.5M25 37.5h3.5"/><path d="M33 23.5h2M33 30.5v7.5"/></symbol>
+<symbol id="d-nota" viewBox="0 0 48 48"><path d="M13 6.5c7-1.5 15-1 21 .5l-1 33.5-3.5-2.5-3.5 3-3.5-2.8-3.5 2.8-3.6-2.7-3.4 2.4z"/><path d="M18 15c4-.8 8.5-.8 12 0M18 21.5c4-.8 8.5-.8 12 0M18 28c2.5-.6 5-.6 7 0"/></symbol>
+<symbol id="d-tesoura" viewBox="0 0 48 48"><circle cx="12" cy="34" r="5.2"/><circle cx="12" cy="14" r="5.2"/><path d="M16.5 30.5 38 11.5M16.5 17.5 38 36.5"/><path d="M29 20.5l2.3 2"/></symbol>
+<symbol id="d-alvo" viewBox="0 0 48 48"><circle cx="24" cy="25" r="16" transform="rotate(3 24 25)"/><circle cx="24" cy="25" r="9.5" transform="rotate(-4 24 25)"/><circle cx="24" cy="25" r="2.6"/><path d="M35 12l6-6M38.5 9.5l3-.5-.5 3"/></symbol>
+<symbol id="d-pessoa" viewBox="0 0 48 48"><circle cx="24" cy="15" r="7.5" transform="rotate(-3 24 15)"/><path d="M10.5 41c1.5-9 7-13.5 13.5-13.5S36 32 37.5 41"/><path d="M20 14.5c1 1.4 2.4 2 4 2s3-.6 4-2"/></symbol>
+<symbol id="d-cadeado" viewBox="0 0 48 48"><rect x="11.5" y="21" width="25" height="20" rx="4" transform="rotate(-1.5 24 31)"/><path d="M16.5 21v-5.5C16.5 10.5 19.8 7 24 7s7.5 3.5 7.5 8.5V21"/><circle cx="24" cy="30" r="2.6"/><path d="M24 32.5v4"/></symbol>
+<symbol id="d-banco" viewBox="0 0 48 48"><path d="M7 19.5 24 8l17 11.5"/><path d="M11 20.5v16M19.5 20.5v16M28.5 20.5v16M37 20.5v16"/><path d="M7.5 38.5c11-1.5 22-1.5 33 0"/><circle cx="24" cy="16.5" r="2"/></symbol>
+<symbol id="d-caixa" viewBox="0 0 48 48"><path d="M9.5 21.5 24 14l14.5 7.5-.5 14.5L24 43l-14-7z"/><path d="M9.5 21.5 24 28.5l14.5-7M24 28.5V43"/><path d="M24 4.5v13M20 9l4-4.5L28 9"/></symbol>
+<symbol id="d-presente" viewBox="0 0 48 48"><rect x="9" y="18" width="30" height="23" rx="2.5" transform="rotate(-1.5 24 29)"/><path d="M8.5 18h31M24 18v23"/><path d="M24 17.5c-2-5.5-6-9-9.5-7.5s-1 7 9.5 7.5zM24 17.5c2-5.5 6-9 9.5-7.5s1 7-9.5 7.5z"/></symbol>
+<symbol id="d-estrela" viewBox="0 0 48 48"><path d="M24 6.5l5.3 11 12.2 1.6-8.9 8.4 2.3 12-10.9-6-10.9 6 2.3-12-8.9-8.4 12.2-1.6z" transform="rotate(-3 24 24)"/></symbol>
+<symbol id="d-papel" viewBox="0 0 48 48"><path d="M12 6.5c8-1.2 16-1 24 .5V42c-8 1.2-16 1-24-.5z" transform="rotate(1.5 24 24)"/><path d="M17.5 15c4.5-.7 9-.7 13 0M17.5 22c4.5-.7 9-.7 13 0M17.5 29c3-.6 6-.6 8.5 0"/></symbol>
+<symbol id="d-clipe" viewBox="0 0 48 48"><path d="M31 10.5 15.5 26.5c-2.6 2.7-2.6 6.6.2 9.1s6.6 2.2 9.1-.5L39 20c1.8-1.9 1.9-4.7.1-6.5s-4.6-1.7-6.4.2L18 28.5c-1 1-1 2.6 0 3.5s2.5.9 3.5-.2L33 20" transform="rotate(14 24 24)"/></symbol>
+<symbol id="d-broto" viewBox="0 0 48 48"><path d="M24 42V24"/><path d="M24 26c-1-7-5.5-10.5-11-10 .8 6.5 5 10.3 11 10z"/><path d="M24 21c.5-7 5-11.5 11-11.5-.3 7-4.5 11.5-11 11.5z"/></symbol>
+<symbol id="d-sino" viewBox="0 0 48 48"><path d="M24 7c-7 0-11 5-11 12 0 8-2.5 11.5-4.5 13.5 10.5 2 20.5 2 31 0-2-2-4.5-5.5-4.5-13.5 0-7-4-12-11-12z" transform="rotate(2 24 22)"/><path d="M20 37.5c.8 3 2.2 4.5 4 4.5s3.2-1.5 4-4.5"/><path d="M24 4.5V7"/></symbol>
+<symbol id="brand-instagram" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+  <path d="M16.5 7.5v.01" /></symbol>
+<symbol id="brand-tiktok" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></symbol>
+<symbol id="brand-youtube" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+  <path d="M10 9l5 3l-5 3z" /></symbol>
+<symbol id="brand-linkedin" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></symbol>
+<symbol id="brand-google-play" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z" />
+  <path d="M15 9l-10.5 11.5" />
+  <path d="M4.5 3.5l10.5 11.5" /></symbol>
+<symbol id="brand-apple" viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z" />
+  <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" /></symbol>
+<symbol id="whats-logo" viewBox="0 0 32 32"><path fill="#fff" stroke="none" d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.2c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.9 16.9c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.3.3-4.4-.9-3.7-1.5-6-5.3-6.2-5.5-.2-.2-1.5-2-1.5-3.8s1-2.7 1.3-3c.3-.4.7-.5 1-.5h.7c.2 0 .5-.1.8.6.3.8 1.1 2.7 1.2 2.9.1.2.2.4 0 .7-.1.3-.2.4-.4.7l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1.9-.2 1.7z"/></symbol>
+</svg>
 
-<header>
-  <nav class="nav" aria-label="principal">
-    <a class="logo" href="#" aria-label="Bolgest — início">
-      <img src="assets/logo.png" alt="Bolgest" height="34">
-    </a>
-    <div class="links">
-      <a href="#comparar">Por que o Bolgest</a>
-      <a href="#planos">Planos</a>
-      <a href="#faq">Dúvidas</a>
-      <a class="cta" href="#planos" onclick="track('cta_play',{pos:'header'})">Começar grátis</a>
-    </div>
-  </nav>
-</header>
+<header><nav class="nav"><a class="lg" href="#" aria-label="Bolgest — início"><img src="assets/logo-escuro.png" alt="Bolgest" class="lgimg"></a><a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Descobrir meu lucro</a></nav></header>
 
-<!-- 1 · HERO -->
+<!-- 1 · HERO: a pergunta + o número, na folha de caderno -->
 <div class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
   <div class="wrap">
-    <div>
-      <span class="chip">✓ contabilidade inclusa na assinatura</span>
-      <h1>Gestão de bolso com <em>contador de verdade</em></h1>
-      <p class="sub">Dinheiro sob controle e burocracia resolvida, do MEI à prestadora de serviços. Você cuida do negócio; a contabilidade é com a gente.</p>
-      <div class="badges">
-        <a class="store play" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('cta_play',{pos:'hero'})"><small>Disponível no</small><b>Google Play</b></a>
-        <a class="store whats" href="https://wa.me/5527988818576" onclick="track('cta_whatsapp',{pos:'hero'})"><small>Dúvidas? Chama no</small><b>WhatsApp</b></a>
-        <span class="store apple" aria-label="Versão para iPhone em breve"><small>App Store</small><b>Em breve</b></span>
-      </div>
+    <span class="selo"><svg class="dico"><use href="#d-calc"/></svg>contabilidade que existe pra sobrar dinheiro</span>
+    <h1>Quanto <span class="marca">sobrou</span> pra você este mês?</h1>
+    <p class="sub">O Bolgest junta o seu caixa e a sua contabilidade pra essa resposta aparecer todo dia — em reais, não em achismo.</p>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Descobrir meu lucro — 30 dias grátis</a>
+    <div class="sobrou"><svg class="clipe-svg" aria-hidden="true"><use href="#d-clipe"/></svg>
+      <span class="lbl">seu resultado de agosto ↓</span>
+      <div class="v">SOBROU R$ 2.340</div>
+      <div class="d">↑ R$ 380 a mais que em julho</div>
+      <div class="mini"><span>entrou <b>R$ 8.200</b></span><span>saiu <b>R$ 4.560</b></span><span>impostos <b>R$ 1.300</b></span></div>
     </div>
-    <div class="phone" aria-hidden="true">
-      <div class="screen">
-        <div class="scr-top">Olá, Maria 👋<small>MEI · CNPJ regular ✓</small></div>
-        <div class="row"><b>DAS de agosto</b><span class="ok">pago ✓</span></div>
-        <div class="row"><b>DASN 2026</b><span class="ok">entregue ✓</span></div>
-        <div class="row"><b>Próximo DAS</b><span class="warn">vence 20/09</span></div>
-        <div class="row"><b>Caixa do mês</b><b class="ok">+ R$ 2.340</b></div>
-        <div class="scr-cta">Emitir nota fiscal</div>
-      </div>
-    </div>
+    <span class="rab hand" style="font-size:1.3rem">↳ a conta que você fazia no caderno — agora ela se faz sozinha</span>
   </div>
 </div>
 
-<!-- barra de confiança -->
-<div class="trust" role="list" aria-label="por que confiar">
-  <div class="wrap">
-    <div role="listitem"><span class="tic">✓</span><span><b>Escritório contábil real</b><br>registrado no CRC/ES 3.764</span></div>
-    <div role="listitem"><span class="tic">✓</span><span><b>Contador responsável</b><br>pela sua contabilidade</span></div>
-    <div role="listitem"><span class="tic">✓</span><span><b>LGPD levada a sério</b><br><a href="privacidade.html">política pública</a> e clara</span></div>
-    <div role="listitem"><span class="tic">✓</span><span><b>Seus dados são seus</b><br>exportação garantida, sem prisão</span></div>
-  </div>
-</div>
-
-<!-- 2 · DORES -->
+<!-- 2 · FATURAR NÃO É LUCRAR -->
 <section>
   <div class="wrap">
-    <span class="kicker">O que o Bolgest resolve</span>
-    <h2>As três dores que todo MEI conhece</h2>
-    <div class="grid3">
-      <div class="card"><div class="icone">⏰</div><h3>O DAS não te pega de surpresa</h3><p>O app lembra você antes do vencimento e emite a guia na hora. Chega de juros por esquecimento.</p></div>
-      <div class="card"><div class="icone">🧾</div><h3>Nota fiscal em minutos, sem portal do governo</h3><p>Emita NFS-e no padrão nacional direto do celular.</p></div>
-      <div class="card"><div class="icone">💰</div><h3>O dinheiro do negócio separado do de casa</h3><p>Veja quanto entra, quanto sai e quanto sobra de verdade.</p></div>
+    <h2 class="t">Faturar <span class="marca">não é</span> lucrar.</h2>
+    <p class="sub2">três vazamentos comem seu lucro sem você ver</p>
+    <div class="g3">
+      <div class="vaza"><span class="n">vazamento nº 1</span><h3>Imposto pago errado</h3><p>Guia atrasada vira multa e juros. Regime errado vira dinheiro doado ao governo.</p></div>
+      <div class="vaza"><span class="n">vazamento nº 2</span><h3>Despesa misturada com a de casa</h3><p>Quando o mercado e o fornecedor saem da mesma conta, o lucro some sem deixar rastro.</p></div>
+      <div class="vaza"><span class="n">vazamento nº 3</span><h3>Preço sem margem</h3><p>Tem serviço que dá prejuízo — e sem a conta feita, você nunca descobre qual.</p></div>
     </div>
   </div>
 </section>
 
-<!-- 3 · COMO FUNCIONA -->
-<section class="soft">
+<!-- 3 · A CONTA VIVA -->
+<section style="padding-top:10px">
   <div class="wrap">
-    <span class="kicker">Como funciona</span>
-    <h2>Três passos e o negócio em dia</h2>
-    <div class="passos">
-      <div class="passo"><div class="num">1</div><h3>Baixe e diga quem você é</h3><p>MEI e empresas entram com o CNPJ; autônomo, com o CPF; produtor rural, com a inscrição de produtor.</p></div>
-      <div class="passo"><div class="num">2</div><h3>Veja sua situação, seus prazos e seu caixa</h3><p>Tudo na primeira tela: o que está em dia, o que vence e quanto sobra.</p></div>
-      <div class="passo"><div class="num">3</div><h3>Toque o negócio com tudo em dia</h3><p>Guias, notas e obrigações resolvidas, com a nossa equipe contábil por trás.</p></div>
+    <div class="conta">
+      <span class="lbl">a conta que o Bolgest faz por você, todo dia</span>
+      <div class="eq">
+        <span><span class="t2">ENTROU</span><b>R$ 8.200</b></span><span class="op">−</span>
+        <span><span class="t2">SAIU</span><b>R$ 4.560</b></span><span class="op">−</span>
+        <span><span class="t2">IMPOSTOS</span><b>R$ 1.300</b></span><span class="op">=</span>
+        <span class="fim"><span class="t2">SOBROU</span><b>R$ 2.340</b></span>
+      </div>
+      <p>é a demonstração de resultado da sua empresa — traduzida pra uma linha que qualquer um lê</p>
     </div>
   </div>
 </section>
 
-<!-- 4 · DIFERENCIAL -->
+<!-- 4 · COMO O LUCRO CRESCE -->
 <section>
+  <div class="wrap">
+    <h2 class="t">Três torneiras que o app <span class="marca">fecha</span></h2>
+    <p class="sub2">é assim que o lucro cresce</p>
+    <div class="g3">
+      <div class="mec"><svg class="dico"><use href="#d-nota"/></svg><h3>Imposto certo, em dia</h3><p>DAS emitido e lembrado, DASN entregue, regime conferido por contador. Zero multa, zero juros.</p></div>
+      <div class="mec"><svg class="dico"><use href="#d-tesoura"/></svg><h3>Despesa categorizada</h3><p>Cada saída com nome e categoria. Você enxerga onde corta — e o que não pode faltar.</p></div>
+      <div class="mec"><svg class="dico"><use href="#d-alvo"/></svg><h3>Margem por serviço</h3><p>Quanto cada serviço deixa de verdade. Preço deixa de ser chute e vira decisão.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · O GUARDIÃO DO LUCRO -->
+<section style="padding-top:0">
   <div class="wrap">
     <div class="dif">
-      <span class="kicker">O nosso diferencial</span>
-      <h2>Sua contabilidade está inclusa</h2>
-      <p>O Bolgest não é um app que te ajuda a se virar com a burocracia: é um <strong>escritório contábil de verdade</strong> fazendo a sua contabilidade, com o app como canal. Escrituração, apurações e obrigações entram na assinatura.</p>
-      <p>Robô lembra. <strong>Contador faz.</strong></p>
+      <h2>A IA lembra. <span class="marca">O contador garante.</span></h2>
+      <p>Por trás do número tem gente: o escritório DANZI &amp; RIBEIRO (CRC/ES 3.764, desde 2008) fazendo a sua contabilidade dentro da assinatura. Quem confere o seu resultado é contador de verdade — não um robô sozinho.</p>
+      <div class="chk">
+        <div><span>Escrituração contábil</span><b>inclusa ✓</b></div>
+        <div><span>Apurações e obrigações</span><b>inclusas ✓</b></div>
+        <div><span>DAS e DASN</span><b>no automático ✓</b></div>
+        <div><span>Balanço anual</span><b>incluso ✓</b></div>
+        <div><span>Conferência humana</span><b>CRC/ES 3.764 ✓</b></div>
+      </div>
+      <span class="hand">— seu guardião do lucro, DANZI &amp; RIBEIRO</span>
     </div>
   </div>
 </section>
 
-<!-- 5 · COMPARATIVO -->
-<section class="soft" id="comparar">
+<!-- 6 · PROVA COM NÚMEROS -->
+<section style="padding-top:0">
   <div class="wrap">
-    <span class="kicker">Compare</span>
-    <h2>Onde o Bolgest é diferente</h2>
-    <p class="sub">App gratuito do governo emite guia; app de finanças não entende de MEI; contabilidade online custa a partir de R$ 195.</p>
-    <div class="tw">
-      <table class="comp">
-        <thead><tr><th></th><th>App do governo</th><th>App de finanças</th><th>Contabilidade online</th><th class="best">Bolgest</th></tr></thead>
+    <h2 class="t">Números de quem já olhou pro resultado</h2>
+    <p class="sub2">clientes do beta, recado colado na geladeira</p>
+    <div class="g3">
+      <div class="post">"Descobri que dois serviços davam <span class="r mau">prejuízo</span> e ajustei o preço. No mês seguinte sobrou <span class="r">R$ 610</span> a mais."<small>Ana · prestadora de serviços · cliente beta</small></div>
+      <div class="post">"Parei de pagar <span class="r mau">multa de DAS</span> — era todo mês. Só isso já paga o app."<small>Maria · manicure MEI · cliente beta</small></div>
+      <div class="post">"Separei a conta do negócio da de casa e vi meu lucro real pela primeira vez: <span class="r">R$ 1.890</span>."<small>João · eletricista MEI · cliente beta</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · PLANOS (otimizados: seletor de perfil no caderno) -->
+<section style="padding-top:0" id="planos">
+  <div class="wrap">
+    <h2 class="t">Diga quem você é. <span class="marca">A gente mostra só o seu plano.</span></h2>
+    <p class="sub2"><svg class="ico-in"><use href="#d-presente"/></svg>30 dias grátis em todos · <svg class="ico-in"><use href="#d-estrela"/></svg>preço de fundador travado por 12 meses no lançamento</p>
+    <div class="perfis" role="tablist" aria-label="Escolha o seu perfil">
+      <button class="pf on" data-p="mei">Sou MEI</button>
+      <button class="pf" data-p="meie">MEI com empregado</button>
+      <button class="pf" data-p="auto">Autônomo (sem CNPJ)</button>
+      <button class="pf" data-p="rural">Produtor Rural</button>
+      <button class="pf" data-p="prest">Empresa de serviços</button>
+      <button class="pf" data-p="plus">Empresa maior</button>
+    </div>
+    <div class="painel">
+      <div>
+        <h3 id="pl-nome">MEI</h3>
+        <span class="anc2" id="pl-anc">custa menos que uma multa de DAS atrasado</span>
+        <ul id="pl-lista"><li>Contabilidade inclusa</li><li>DAS emitido e lembrado</li><li>DASN entregue sem drama</li><li>Nota fiscal no padrão nacional</li><li>SOBROU todo dia na tela</li></ul>
+      </div>
+      <div class="caixa">
+        <div class="tot" id="pl-preco">R$ 49,90<small>/mês</small></div>
+        <label class="assist" id="assist-wrap"><input type="checkbox" id="assist"><span><b>Adicional Assistido (+R$ 100/mês)</b><br>conferência assistida e captura automatizada</span></label>
+        <a class="btn" id="pl-cta" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Começar 30 dias grátis</a>
+        <span class="teste" id="pl-teste">↳ cancelou no teste, não paga nada</span>
+      </div>
+    </div>
+    <details class="cmp-wrap">
+      <summary>Comparar os 6 planos lado a lado</summary>
+      <div class="tw"><table class="cmp">
+        <thead><tr><th>Plano</th><th>Pra quem</th><th>Preço</th><th>O que muda</th></tr></thead>
         <tbody>
-          <tr><td>Emite DAS e guias</td><td class="v">✓</td><td class="x">✗</td><td class="v">✓</td><td class="best v">✓</td></tr>
-          <tr><td>Entende de MEI</td><td>parcial</td><td class="x">✗</td><td class="v">✓</td><td class="best v">✓</td></tr>
-          <tr><td>Gestão do dinheiro (caixa e lucro)</td><td class="x">✗</td><td class="v">✓</td><td class="x">✗</td><td class="best v">✓</td></tr>
-          <tr><td>Contabilidade inclusa, com contador</td><td class="x">✗</td><td class="x">✗</td><td class="v">✓</td><td class="best v">✓</td></tr>
-          <tr><td>Atende autônomo sem CNPJ e produtor rural</td><td class="x">✗</td><td class="x">✗</td><td>raro</td><td class="best v">✓</td></tr>
-          <tr><td>Preço mensal</td><td>grátis</td><td>R$ 20 a 40</td><td>R$ 195+</td><td class="best">a partir de R$ 49,90</td></tr>
+          <tr><td><b>MEI</b></td><td>toca tudo sozinho</td><td class="p">R$ 49,90</td><td>DAS, DASN, nota, SOBROU</td></tr>
+          <tr><td><b>MEI c/ empregado</b></td><td>tem 1 funcionário</td><td class="p">R$ 99,90</td><td>+ folha, eSocial, férias e 13º</td></tr>
+          <tr><td><b>Autônomo</b></td><td>CPF, sem CNPJ</td><td class="p">R$ 159,90</td><td>carnê-leão, INSS, IRPF</td></tr>
+          <tr><td><b>Produtor Rural</b></td><td>inscrição de produtor (ES)</td><td class="p">R$ 199,00</td><td>LCDPR, FUNRURAL, ITR</td></tr>
+          <tr><td><b>Prestador de Serviço</b></td><td>empresa, até 2 empregados</td><td class="p">R$ 258,00</td><td>escrituração completa, margem por serviço</td></tr>
+          <tr><td><b>Prestador Plus</b></td><td>até 6 empregados, 2 filiais</td><td class="p">sob consulta</td><td>volume maior, atendimento dedicado</td></tr>
         </tbody>
-      </table>
+      </table></div>
+    </details>
+    <div class="fid"><svg class="ico-in"><use href="#d-papel"/></svg><b>Combinado às claras:</b> vigência de 12 meses com renovação automática · cancelamento antecipado: multa de 50% das mensalidades restantes · cancelando dentro dos 30 dias de teste, você não paga nada.</div>
+  </div>
+</section>
+
+<script>
+var PLANOS={
+ mei:{n:"MEI",a:"custa menos que uma multa de DAS atrasado",v:49.90,f:["Contabilidade inclusa","DAS emitido e lembrado","DASN entregue sem drama","Nota fiscal no padrão nacional","SOBROU todo dia na tela"],cta:"Começar 30 dias grátis",url:"https://play.google.com/store/apps/details?id=app.pjmei.bolgest"},
+ meie:{n:"MEI com empregado",a:"custa menos que um erro de rescisão",v:99.90,f:["Tudo do plano MEI","Folha de pagamento do empregado","eSocial e encargos em dia","Férias e 13º calculados"],cta:"Começar 30 dias grátis",url:"https://play.google.com/store/apps/details?id=app.pjmei.bolgest"},
+ auto:{n:"Autônomo",a:"custa menos que cair na malha fina do carnê-leão",v:159.90,f:["Livro caixa organizado","Carnê-leão apurado todo mês","Guia do INSS na mão","IRPF consolidado no fim do ano"],cta:"Começar 30 dias grátis",url:"https://play.google.com/store/apps/details?id=app.pjmei.bolgest"},
+ rural:{n:"Produtor Rural · só ES",a:"custa menos que uma autuação do FUNRURAL",v:199.00,f:["LCDPR escriturado","FUNRURAL apurado","ITR e anexo rural do IRPF","Nota de produtor sob controle"],cta:"Começar 30 dias grátis",url:"https://play.google.com/store/apps/details?id=app.pjmei.bolgest"},
+ prest:{n:"Prestador de Serviço",a:"um quinto do contador tradicional médio",v:258.00,f:["Escrituração contábil completa","Simples Nacional em dia","Folha de até 2 empregados","Margem por serviço na tela"],cta:"Começar 30 dias grátis",url:"https://play.google.com/store/apps/details?id=app.pjmei.bolgest"},
+ plus:{n:"Prestador de Serviço Plus",a:"pra empresa que cresceu: até 6 empregados e 2 estabelecimentos",v:null,f:["Tudo do Prestador de Serviço","Até 6 empregados","Até 2 estabelecimentos","Atendimento dedicado"],cta:"Falar com a gente no WhatsApp",url:"https://wa.me/5527988818576"}
+};
+var atual="mei";
+function brl(v){return v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"})}
+function render(){
+ var p=PLANOS[atual],ass=document.getElementById("assist").checked;
+ document.getElementById("pl-nome").textContent=p.n;
+ document.getElementById("pl-anc").textContent=p.a;
+ document.getElementById("pl-lista").innerHTML=p.f.map(function(x){return "<li>"+x+"</li>"}).join("");
+ document.getElementById("pl-preco").innerHTML=p.v?brl(p.v+(ass?100:0))+"<small>/mês"+(ass?" com Assistido":"")+"</small>":"sob consulta";
+ var c=document.getElementById("pl-cta");c.textContent=p.cta;c.href=p.url;
+ document.getElementById("assist-wrap").style.display=p.v?"flex":"none";
+ document.getElementById("pl-teste").style.display=p.v?"block":"none";
+}
+document.querySelectorAll(".pf").forEach(function(b){b.addEventListener("click",function(){
+ document.querySelectorAll(".pf").forEach(function(x){x.classList.remove("on")});
+ b.classList.add("on");atual=b.dataset.p;render();
+})});
+document.getElementById("assist").addEventListener("change",render);
+</script>
+
+<!-- 8 · CONFIANÇA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2 class="t">O número é seu. <span class="marca">Os dados também.</span></h2>
+    <p class="sub2">&nbsp;</p>
+    <div class="seg">
+      <div class="s"><svg class="dico"><use href="#d-pessoa"/></svg><b>Escritório real</b><span>DANZI &amp; RIBEIRO, CRC/ES 3.764, desde 2008.</span></div>
+      <div class="s"><svg class="dico"><use href="#d-cadeado"/></svg><b>LGPD a sério</b><span>Política pública, encarregado nomeado, canal direto.</span></div>
+      <div class="s"><svg class="dico"><use href="#d-banco"/></svg><b>Banco só leitura</b><span>A conexão consulta o extrato — nunca movimenta.</span></div>
+      <div class="s"><svg class="dico"><use href="#d-caixa"/></svg><b>Sem aprisionamento</b><span>Exportação dos seus dados garantida por contrato.</span></div>
     </div>
   </div>
 </section>
 
-<!-- 6 · PLANOS -->
-<section id="planos">
+<!-- 9 · FAQ + CTA FINAL -->
+<section style="padding-top:0">
   <div class="wrap">
-    <span class="kicker">Planos</span>
-    <h2>Um plano pro seu perfil</h2>
-    <div class="planos-head">
-      <span class="chip">🎁 30 dias grátis pra testar</span>
-      <span class="chip">⭐ Preço de fundador travado por 12 meses na semana de lançamento</span>
-    </div>
-    <div class="gridp">
-      <div class="plano destaque">
-        <span class="maisvendido">MAIS ESCOLHIDO</span>
-        <span class="selo">contabilidade inclusa</span>
-        <h3>MEI</h3><div class="tag">Pra quem toca tudo sozinho</div>
-        <div class="preco">R$ 49,90<small>/mês</small></div>
-        <ul><li>DAS emitido e lembrado</li><li>DASN entregue sem drama</li><li>Situação do CNPJ sempre à vista</li><li>Nota fiscal no padrão nacional</li></ul>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'mei'})">Começar grátis</a>
-      </div>
-      <div class="plano">
-        <span class="selo">contabilidade inclusa</span>
-        <h3>MEI com empregado</h3><div class="tag">Folha e obrigações do seu funcionário, resolvidas</div>
-        <div class="preco">R$ 99,90<small>/mês</small></div>
-        <ul><li>Tudo do plano MEI</li><li>Folha de pagamento do empregado</li><li>eSocial e encargos em dia</li><li>Férias e 13º calculados</li></ul>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'mei_empregado'})">Começar grátis</a>
-      </div>
-      <div class="plano">
-        <span class="selo">contabilidade inclusa</span>
-        <h3>Autônomo</h3><div class="tag">Carnê-leão e INSS em dia, sem CNPJ</div>
-        <div class="preco">R$ 159,90<small>/mês</small></div>
-        <ul><li>Livro caixa organizado</li><li>Carnê-leão apurado todo mês</li><li>Guia do INSS na mão</li><li>IRPF consolidado no fim do ano</li></ul>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'autonomo'})">Começar grátis</a>
-      </div>
-      <div class="plano">
-        <span class="selo">contabilidade inclusa</span>
-        <h3>Produtor Rural</h3><div class="tag">Livro caixa rural, FUNRURAL e nota de produtor</div>
-        <div class="preco">R$ 199,00<small>/mês</small></div>
-        <ul><li>LCDPR escriturado</li><li>FUNRURAL apurado</li><li>ITR e anexo rural do IRPF</li><li>Notas de produtor sob controle</li></ul>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'rural'})">Começar grátis</a>
-        <p class="rural-nota">disponível para produtores do Espírito Santo</p>
-      </div>
-      <div class="plano">
-        <span class="selo">contabilidade inclusa</span>
-        <h3>Prestador de Serviço</h3><div class="tag">Contabilidade completa da sua empresa, no bolso</div>
-        <div class="preco">R$ 258,00<small>/mês</small></div>
-        <ul><li>Escrituração contábil completa</li><li>Apurações e obrigações do Simples</li><li>Folha de até 2 empregados</li><li>Balanço e demonstrações anuais</li></ul>
-        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'prestador'})">Começar grátis</a>
-      </div>
-      <div class="plano">
-        <span class="selo">contabilidade inclusa</span>
-        <h3>Prestador de Serviço Plus</h3><div class="tag">Pra empresa que cresceu</div>
-        <div class="preco">sob consulta</div>
-        <ul><li>Até 6 empregados</li><li>Até 2 estabelecimentos</li><li>Maior volume de documentos</li><li>Atendimento dedicado</li></ul>
-        <a class="btn outline" href="https://wa.me/5527988818576" onclick="track('cta_whatsapp',{pos:'plano_plus'})">Falar com a gente</a>
-      </div>
-    </div>
-    <p class="ancora">Pra comparar: contabilidade online tradicional começa em <b>R$ 195/mês</b> — e não mostra o seu caixa.</p>
-    <div class="fidelidade">Planos com vigência de 12 meses e renovação automática. Cancelamento antecipado: multa de 50% das mensalidades restantes. Cancelando durante os 30 dias de teste, não há cobrança nem multa.</div>
-  </div>
-</section>
-
-<!-- 7 · PROVA SOCIAL -->
-<section class="soft">
-  <div class="wrap">
-    <span class="kicker">Quem já usa</span>
-    <h2>Gente de verdade, negócio em dia</h2>
-    <div class="grid3">
-      <div class="card"><div class="dep"><div class="avatar" aria-hidden="true">M</div><div><p>"Nunca mais atrasei o DAS."</p><small>Maria · manicure MEI · cliente beta</small></div></div></div>
-      <div class="card"><div class="dep"><div class="avatar" aria-hidden="true">J</div><div><p>"Emiti minha primeira nota em dois minutos."</p><small>João · eletricista MEI · cliente beta</small></div></div></div>
-      <div class="card"><div class="dep"><div class="avatar" aria-hidden="true">A</div><div><p>"Finalmente sei quanto sobra no fim do mês."</p><small>Ana · prestadora de serviços · cliente beta</small></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 8 · FAQ -->
-<section id="faq">
-  <div class="wrap">
-    <span class="kicker">Dúvidas</span>
-    <h2>Perguntas frequentes</h2>
-    <details ontoggle="if(this.open)track('faq_open',{q:'das_atrasado'})"><summary>Atrasei o DAS. E agora?</summary><p>Dá pra resolver: o app emite a guia atualizada com os acréscimos e você quita na hora. E o Bolgest te lembra dos próximos pra não acontecer de novo.</p></details>
-    <details ontoggle="if(this.open)track('faq_open',{q:'dasn'})"><summary>O que é a DASN e quando preciso entregar?</summary><p>É a declaração anual obrigatória do MEI. Pelo app, você entrega em minutos e recebe o lembrete antes do prazo.</p></details>
-    <details ontoggle="if(this.open)track('faq_open',{q:'cnpj_regular'})"><summary>Como sei se meu CNPJ está regular?</summary><p>O Bolgest consulta sua situação na Receita e te avisa se algo precisar de atenção.</p></details>
-    <details ontoggle="if(this.open)track('faq_open',{q:'nota_fiscal'})"><summary>MEI é obrigado a emitir nota fiscal?</summary><p>Pra empresa, sim; pra pessoa física, em regra não. No app você emite a NFS-e no padrão nacional quando precisar.</p></details>
-    <details ontoggle="if(this.open)track('faq_open',{q:'empresa_servicos'})"><summary>Sou uma empresa de serviços, não MEI. O Bolgest me atende?</summary><p>Sim. O plano Prestador de Serviço traz a contabilidade completa da sua empresa com contador de verdade, direto no app.</p></details>
-    <details ontoggle="if(this.open)track('faq_open',{q:'quanto_custa'})"><summary>Quanto custa e como funciona o teste?</summary><p>Os planos começam em R$ 49,90 por mês, com a contabilidade inclusa. Todo novo cliente tem 30 dias de acesso completo, grátis: cancelando dentro do teste, não há cobrança nenhuma.</p></details>
-    <details ontoggle="if(this.open)track('faq_open',{q:'cancelamento'})"><summary>Posso cancelar quando quiser?</summary><p>Pode, pelo app ou pelos nossos canais. Durante o teste de 30 dias e nos 7 dias após a primeira cobrança, sem custo. Depois disso os planos têm vigência de 12 meses; o cancelamento antecipado tem multa de 50% das mensalidades restantes, tudo informado antes de você assinar. Detalhes nos <a href="termos.html">Termos de Uso</a>.</p></details>
-  </div>
-</section>
-
-<!-- 9 · CTA FINAL -->
-<section>
-  <div class="wrap">
+    <h2 class="t">Ficou com dúvida?</h2>
+    <details><summary>Como o Bolgest sabe quanto sobrou?</summary><p>Entradas e saídas do seu caixa, menos os impostos apurados pela contabilidade. A conta roda todo dia; o contador confere o resultado do mês.</p></details>
+    <details><summary>Atrasei o DAS. E agora?</summary><p>O app emite a guia atualizada com os acréscimos e você quita na hora — e te lembra dos próximos pra multa não voltar a comer seu lucro.</p></details>
+    <details><summary>Quanto custa e como funciona o teste?</summary><p>A partir de R$ 49,90/mês com a contabilidade inclusa. São 30 dias grátis: cancelou dentro do teste, não paga nada.</p></details>
+    <details><summary>Posso cancelar quando quiser?</summary><p>No teste e nos 7 dias após a primeira cobrança, sem custo. Depois vale a vigência de 12 meses com multa de 50% das mensalidades restantes — sempre mostrada na tela antes de assinar.</p></details>
     <div class="final">
-      <h2>Gestão de bolso com contador de verdade.</h2>
-      <p class="sub" style="margin:0 auto">30 dias grátis. Sua contabilidade inclusa.</p>
-      <div class="badges">
-        <a class="store play" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('cta_play',{pos:'final'})"><small>Disponível no</small><b>Google Play</b></a>
-        <span class="store apple"><small>App Store</small><b>Em breve</b></span>
-      </div>
+      <h2>Todo mês sem resposta é um mês <span class="marca">decidindo no escuro</span>.</h2>
+      <span class="hand">↳ 30 dias grátis pra ver o seu SOBROU — com contador de verdade por trás</span>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Descobrir meu lucro</a>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <div>
-      <a class="logo" href="#" aria-label="Bolgest — voltar ao topo">
-        <img src="assets/logo.png" alt="Bolgest" height="34">
-      </a>
-      <p style="margin-top:10px">Contabilidade inclusa na assinatura, do MEI à prestadora de serviços.</p>
-      <p style="margin-top:8px">DANZI &amp; RIBEIRO CONTADORES ASSOCIADOS LTDA<br>CNPJ 10.520.819/0001-33 · CRC/ES 3.764<br>Cachoeiro de Itapemirim · ES</p>
+<footer class="rdp">
+  <div class="rdp-cols">
+    <div class="rdp-marca">
+      <img src="assets/logo-escuro.png" alt="Bolgest">
+      <p>Gestão de bolso com contador de verdade. Contabilidade inclusa na assinatura, do MEI à prestadora de serviços.</p>
+      <div class="rdp-lojas">
+        <a class="rdp-loja" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" aria-label="Baixar no Google Play"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z" />
+  <path d="M15 9l-10.5 11.5" />
+  <path d="M4.5 3.5l10.5 11.5" /></svg><span><small>DISPONÍVEL NO</small><b>Google Play</b></span></a>
+        <span class="rdp-loja off" aria-label="Em breve na App Store"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z" />
+  <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" /></svg><span><small>EM BREVE NA</small><b>App Store</b></span></span>
+      </div>
     </div>
     <div>
-      <h4>Contato</h4>
-      <p><a href="mailto:falecom@bolgest.com">falecom@bolgest.com</a><br><a href="https://wa.me/5527988818576" onclick="track('cta_whatsapp',{pos:'footer'})">WhatsApp (27) 98881-8576</a></p>
-      <h4 style="margin-top:14px">Redes</h4>
-      <p><a href="#">Instagram</a> · <a href="#">TikTok</a> · <a href="#">YouTube</a> · <a href="#">LinkedIn</a></p>
+      <h4>Institucional</h4>
+      <ul>
+        <li>DANZI &amp; RIBEIRO CONTADORES ASSOCIADOS LTDA</li>
+        <li>CNPJ 10.520.819/0001-33</li>
+        <li>CRC/ES 3.764 · escritório desde 2008</li>
+        <li>Rua Rafael Dias Pacheco, 159 · Sala A · Recanto</li>
+        <li>Cachoeiro de Itapemirim/ES · CEP 29.303-120</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Atendimento</h4>
+      <ul>
+        <li><a href="mailto:falecom@bolgest.com">falecom@bolgest.com</a></li>
+        <li><a href="https://wa.me/5527988818576">WhatsApp (27) 98881-8576</a></li>
+        <li>Chat no app · dias úteis, 8h às 18h</li>
+        <li><a href="mailto:danzi@pjmei.app">Encarregado de dados (LGPD)</a></li>
+      </ul>
+      <h4>Redes</h4>
+      <div class="rdp-redes">
+        <a class="rdp-rede" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+  <path d="M16.5 7.5v.01" /></svg></a>
+        <a class="rdp-rede" href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg></a>
+        <a class="rdp-rede" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+  <path d="M10 9l5 3l-5 3z" /></svg></a>
+        <a class="rdp-rede" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg></a>
+      </div>
     </div>
     <div>
       <h4>Legal</h4>
-      <p><a href="privacidade.html">Política de Privacidade</a><br><a href="termos.html">Termos de Uso</a></p>
+      <ul>
+        <li><a href="privacidade.html">Política de Privacidade</a></li>
+        <li><a href="termos.html">Termos de Uso</a></li>
+        <li><a href="contrato.html">Contrato de prestação de serviços</a></li>
+        <li><a href="avulsos.html">Tabela de serviços avulsos</a></li>
+      </ul>
+      <h4>O app</h4>
+      <ul>
+        <li><a href="n.html#planos">Planos e preços</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Baixar o app</a></li>
+        <li><a href="https://wa.me/5527988818576">Falar com um contador</a></li>
+      </ul>
     </div>
   </div>
-  <div class="wrap legal">© 2026 Bolgest · bolgest.com — Todos os direitos reservados.</div>
+  <div class="rdp-prof"><strong style="color:#fff">Pra sua profissão:</strong> Bolgest para <a href="medicos.html">Médicos</a>, <a href="dentistas.html">Dentistas</a>, <a href="psicologos.html">Psicólogos</a> e <a href="advogados.html">Advogados</a></div>
+  <div class="rdp-base">© 2026 Bolgest · bolgest.com — Todos os direitos reservados. Bolgest é um produto do escritório DANZI &amp; RIBEIRO CONTADORES ASSOCIADOS LTDA sobre a plataforma PJMEI.</div>
 </footer>
-
-<a class="zap" href="https://wa.me/5527988818576" aria-label="Falar no WhatsApp" onclick="track('cta_whatsapp',{pos:'float'})">
-  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.2c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.9 16.9c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.3.3-4.4-.9-3.7-1.5-6-5.3-6.2-5.5-.2-.2-1.5-2-1.5-3.8s1-2.7 1.3-3c.3-.4.7-.5 1-.5h.7c.2 0 .5-.1.8.6.3.8 1.1 2.7 1.2 2.9.1.2.2.4 0 .7-.1.3-.2.4-.4.7l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1.9-.2 1.7z"/></svg>
+<a class="zap" href="https://wa.me/5527988818576?text=Oi!%20Quero%20saber%20mais%20sobre%20o%20Bolgest" aria-label="Chamar no WhatsApp">
+  <span class="balao">chama a gente aqui ↓</span>
+  <svg viewBox="0 0 32 32"><use href="#whats-logo"/></svg>
 </a>
-
-<div class="stickybar" aria-hidden="false">
-  <a class="p" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('cta_play',{pos:'sticky'})">🎁 30 dias grátis · Baixar o app</a>
-</div>
-
-</body>
-</html>
+</body></html>
