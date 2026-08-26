@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bolgest: gestão de bolso com contador de verdade</title>
+<meta name="description" content="Contabilidade inclusa na assinatura: DAS, nota fiscal e dinheiro em dia, do MEI ao produtor rural. Um escritório contábil de verdade, no seu celular. 30 dias grátis.">
+<link rel="canonical" href="https://bolgest.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bolgest: gestão de bolso com contador de verdade">
+<meta property="og:description" content="Contabilidade inclusa na assinatura, do MEI à prestadora de serviços. 30 dias grátis pra testar.">
+<meta property="og:url" content="https://bolgest.com/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2338E700'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='30' font-weight='800' text-anchor='middle' fill='%230c2200'%3Ebg%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Poppins:wght@400;600;700&display=swap">
+
+<!-- ═══ GA4 · tarefa 2.2.3: troque o ID abaixo pelo real e o script ativa sozinho ═══ -->
+<script>
+var GA_ID='G-XXXXXXXXXX';
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+if(!/X{4}/.test(GA_ID)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID);}
+function track(ev,params){try{gtag('event',ev,params||{})}catch(e){}}
+</script>
+<!-- Meta Pixel: inserir aqui quando a conta de ads existir -->
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"AccountingService","name":"Bolgest","url":"https://bolgest.com","email":"falecom@bolgest.com","telephone":"+55-27-98881-8576",
+  "parentOrganization":{"@type":"Organization","name":"Danzi & Ribeiro Contadores Associados LTDA","taxID":"10.520.819/0001-33"},
+  "address":{"@type":"PostalAddress","addressLocality":"Cachoeiro de Itapemirim","addressRegion":"ES","addressCountry":"BR"},
+  "slogan":"Gestão de bolso com contador de verdade"},
+ {"@type":"SoftwareApplication","name":"Bolgest","operatingSystem":"Android","applicationCategory":"FinanceApplication",
+  "installUrl":"https://play.google.com/store/apps/details?id=app.pjmei.bolgest",
+  "offers":[
+   {"@type":"Offer","name":"MEI","price":"49.90","priceCurrency":"BRL"},
+   {"@type":"Offer","name":"MEI com empregado","price":"99.90","priceCurrency":"BRL"},
+   {"@type":"Offer","name":"Autônomo","price":"159.90","priceCurrency":"BRL"},
+   {"@type":"Offer","name":"Produtor Rural","price":"199.00","priceCurrency":"BRL"},
+   {"@type":"Offer","name":"Prestador de Serviço","price":"258.00","priceCurrency":"BRL"}]},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Atrasei o DAS. E agora?","acceptedAnswer":{"@type":"Answer","text":"Dá pra resolver: o app emite a guia atualizada com os acréscimos e você quita na hora. E o Bolgest te lembra dos próximos pra não acontecer de novo."}},
+  {"@type":"Question","name":"O que é a DASN e quando preciso entregar?","acceptedAnswer":{"@type":"Answer","text":"É a declaração anual obrigatória do MEI. Pelo app, você entrega em minutos e recebe o lembrete antes do prazo."}},
+  {"@type":"Question","name":"Como sei se meu CNPJ está regular?","acceptedAnswer":{"@type":"Answer","text":"O Bolgest consulta sua situação na Receita e te avisa se algo precisar de atenção."}},
+  {"@type":"Question","name":"MEI é obrigado a emitir nota fiscal?","acceptedAnswer":{"@type":"Answer","text":"Pra empresa, sim; pra pessoa física, em regra não. No app você emite a NFS-e no padrão nacional quando precisar."}},
+  {"@type":"Question","name":"Quanto custa o Bolgest?","acceptedAnswer":{"@type":"Answer","text":"Os planos começam em R$ 49,90 por mês, com a contabilidade inclusa, e todo novo cliente tem 30 dias grátis pra testar."}}]}
+]}
+</script>
+
+<style>
+:root{--verde:#38E700;--sust:#65B20A;--verdetx:#3f7a06;--ink:#14210f;--sub:#57654f;--bg:#ffffff;--soft:#f5faf1;--line:#e3ecdf;--escuro:#0c2200}
+*{margin:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:Montserrat,Poppins,sans-serif;font-weight:800;line-height:1.12;letter-spacing:-.01em}
+h2{font-size:clamp(1.55rem,4vw,2.2rem);margin-bottom:10px}
+a{color:var(--verdetx)}
+:focus-visible{outline:3px solid var(--verde);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.kicker{color:var(--verdetx);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+.sub{color:var(--sub);max-width:640px}
+section{padding:64px 0}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#e9fbdc;color:#1d6606;font-weight:700;font-size:.78rem;padding:6px 14px;border-radius:999px}
+/* header */
+header{position:sticky;top:0;background:#ffffffee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:60}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1080px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:9px;font-family:Montserrat,sans-serif;font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--ink)}
+.logo svg{width:34px;height:34px;flex-shrink:0}
+.logo span{color:var(--verdetx)}
+.nav .links{display:flex;gap:22px;align-items:center;font-size:.88rem}
+.nav .links a{text-decoration:none;color:var(--sub);font-weight:600}
+.nav a.cta{background:var(--verde);color:var(--escuro);font-weight:700;padding:10px 18px;border-radius:10px;text-decoration:none}
+@media(max-width:760px){.nav .links a:not(.cta){display:none}}
+/* hero */
+.hero{background:radial-gradient(80% 100% at 20% 0%,#effbe6 0%,#ffffff 70%);padding:68px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2rem,6vw,3.2rem);margin:14px 0}
+.hero h1 em{font-style:normal;color:var(--verdetx)}
+.badges{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
+.store{display:inline-flex;flex-direction:column;justify-content:center;padding:11px 22px;border-radius:12px;text-decoration:none;line-height:1.2}
+.store small{font-size:.63rem;opacity:.85}
+.store b{font-size:1.02rem}
+.store.play{background:var(--escuro);color:#fff}
+.store.whats{background:#fff;border:2px solid var(--sust);color:var(--verdetx)}
+.store.apple{background:#eef3ec;color:var(--sub);cursor:default}
+/* phone */
+.phone{width:252px;margin:0 auto;background:var(--escuro);border-radius:34px;padding:12px;box-shadow:0 28px 64px rgba(20,40,10,.18)}
+.screen{background:#fff;border-radius:24px;overflow:hidden;font-size:.68rem}
+.scr-top{background:var(--verde);color:var(--escuro);padding:14px 14px 10px;font-weight:700}
+.scr-top small{display:block;font-weight:400;font-size:.6rem;opacity:.75}
+.row{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-bottom:1px solid #f0f4ee}
+.row b{font-size:.7rem}
+.ok{color:#1d8a06;font-weight:700}
+.warn{color:#b45309;font-weight:700}
+.scr-cta{margin:10px 14px 14px;background:var(--verde);color:var(--escuro);text-align:center;font-weight:700;border-radius:9px;padding:8px}
+/* trust bar */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:18px 20px}
+@media(max-width:760px){.trust .wrap{grid-template-columns:repeat(2,1fr)}}
+.trust div{font-size:.78rem;color:var(--sub);display:flex;gap:8px;align-items:flex-start}
+.trust b{color:var(--ink)}
+.trust .tic{color:var(--verdetx);font-weight:800}
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+@media(max-width:760px){.grid3{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+.card h3{font-size:1.02rem;margin-bottom:8px}
+.card p{color:var(--sub);font-size:.92rem}
+.icone{width:42px;height:42px;border-radius:12px;background:#e9fbdc;display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:14px}
+.soft{background:var(--soft)}
+/* passos */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+@media(max-width:760px){.passos{grid-template-columns:1fr}}
+.passo{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}
+.passo .num{font-family:Montserrat,sans-serif;font-size:2rem;font-weight:800;color:var(--verde);-webkit-text-stroke:1px var(--verdetx);line-height:1}
+.passo h3{font-size:1rem;margin:10px 0 6px}
+.passo p{color:var(--sub);font-size:.9rem}
+/* diferencial */
+.dif{background:var(--escuro);color:#fff;border-radius:24px;padding:52px 40px}
+@media(max-width:640px){.dif{padding:36px 24px}}
+.dif h2{color:#fff}
+.dif .kicker{color:var(--verde)}
+.dif p{color:#cfe0c6;max-width:720px;margin-top:12px}
+.dif strong{color:var(--verde)}
+/* comparativo */
+.tw{overflow-x:auto;margin-top:28px;border:1px solid var(--line);border-radius:16px}
+table.comp{border-collapse:collapse;width:100%;font-size:.86rem;min-width:640px;background:#fff}
+.comp th,.comp td{padding:12px 14px;text-align:center;border-bottom:1px solid var(--line)}
+.comp th{font-size:.8rem}
+.comp td:first-child,.comp th:first-child{text-align:left;font-weight:600}
+.comp .best{background:#f2fce9;font-weight:700}
+.comp thead .best{background:var(--verde);color:var(--escuro);border-radius:0}
+.comp .x{color:#c2410c}
+.comp .v{color:var(--verdetx);font-weight:800}
+/* planos */
+.planos-head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.gridp{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+@media(max-width:980px){.gridp{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.gridp{grid-template-columns:1fr}}
+.plano{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;position:relative}
+.plano.destaque{border:2px solid var(--verde);box-shadow:0 14px 36px rgba(56,231,0,.14)}
+.maisvendido{position:absolute;top:-11px;left:20px;background:var(--verde);color:var(--escuro);font-size:.66rem;font-weight:800;padding:3px 12px;border-radius:999px}
+.plano .selo{align-self:flex-start;background:#e9fbdc;color:#1d6606;font-size:.65rem;font-weight:700;padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.plano h3{font-size:1.02rem}
+.plano .tag{color:var(--sub);font-size:.8rem;margin:2px 0 12px;min-height:2.4em}
+.preco{font-family:Montserrat,sans-serif;font-size:1.7rem;font-weight:800}
+.preco small{font-family:Poppins;font-size:.78rem;color:var(--sub);font-weight:400}
+.plano ul{list-style:none;margin:14px 0 18px;padding:0;font-size:.84rem;color:var(--sub)}
+.plano li{padding:4px 0 4px 22px;position:relative}
+.plano li::before{content:"✓";position:absolute;left:0;color:var(--verdetx);font-weight:700}
+.plano a.btn{margin-top:auto;text-align:center;background:var(--verde);color:var(--escuro);font-weight:700;padding:12px;border-radius:10px;text-decoration:none;font-size:.9rem}
+.plano a.btn.outline{background:#fff;border:2px solid var(--sust);color:var(--verdetx)}
+.rural-nota{font-size:.7rem;color:#b45309;font-weight:600;margin-top:8px}
+.ancora{margin-top:18px;font-size:.85rem;color:var(--sub)}
+.fidelidade{margin-top:16px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--sust);border-radius:0 12px 12px 0;padding:14px 18px;font-size:.88rem}
+/* depoimentos */
+.dep{display:flex;gap:12px;align-items:flex-start}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--sust);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0}
+.dep small{color:var(--sub)}
+/* FAQ */
+details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-top:10px}
+summary{font-weight:700;cursor:pointer;font-size:.95rem}
+details p{color:var(--sub);margin-top:10px;font-size:.92rem}
+/* cta final */
+.final{background:linear-gradient(135deg,#e9fbdc,#f7fdf2);text-align:center;border-radius:24px;padding:56px 24px}
+.final h2{max-width:560px;margin:0 auto 6px}
+.final .badges{justify-content:center}
+/* footer */
+footer{border-top:1px solid var(--line);padding:40px 0 110px;font-size:.82rem;color:var(--sub)}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+@media(max-width:640px){footer .wrap{grid-template-columns:1fr}}
+footer a{text-decoration:none}
+footer h4{color:var(--ink);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.legal{margin-top:22px;padding-top:16px;border-top:1px solid var(--line);font-size:.74rem}
+/* flutuantes */
+.zap{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.22);z-index:70;text-decoration:none}
+.zap svg{width:28px;height:28px;fill:#fff}
+.stickybar{display:none}
+@media(max-width:760px){
+ .zap{bottom:76px}
+ .stickybar{display:flex;position:fixed;left:0;right:0;bottom:0;background:#fffffff2;border-top:1px solid var(--line);padding:10px 14px;gap:10px;z-index:65;backdrop-filter:blur(8px)}
+ .stickybar a{flex:1;text-align:center;font-weight:700;font-size:.88rem;padding:12px;border-radius:10px;text-decoration:none}
+ .stickybar .p{background:var(--verde);color:var(--escuro)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="principal">
+    <a class="logo" href="#" aria-label="Bolgest — início">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#38E700"/><text x="32" y="44" font-family="Montserrat,Arial" font-size="28" font-weight="800" text-anchor="middle" fill="#0c2200">bg</text></svg>
+      Bol<span>gest</span>
+    </a>
+    <div class="links">
+      <a href="#comparar">Por que o Bolgest</a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="cta" href="#planos" onclick="track('cta_play',{pos:'header'})">Começar grátis</a>
+    </div>
+  </nav>
+</header>
+
+<!-- 1 · HERO -->
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="chip">✓ contabilidade inclusa na assinatura</span>
+      <h1>Gestão de bolso com <em>contador de verdade</em></h1>
+      <p class="sub">Dinheiro sob controle e burocracia resolvida, do MEI à prestadora de serviços. Você cuida do negócio; a contabilidade é com a gente.</p>
+      <div class="badges">
+        <a class="store play" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('cta_play',{pos:'hero'})"><small>Disponível no</small><b>Google Play</b></a>
+        <a class="store whats" href="https://wa.me/5527988818576" onclick="track('cta_whatsapp',{pos:'hero'})"><small>Dúvidas? Chama no</small><b>WhatsApp</b></a>
+        <span class="store apple" aria-label="Versão para iPhone em breve"><small>App Store</small><b>Em breve</b></span>
+      </div>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="scr-top">Olá, Maria 👋<small>MEI · CNPJ regular ✓</small></div>
+        <div class="row"><b>DAS de agosto</b><span class="ok">pago ✓</span></div>
+        <div class="row"><b>DASN 2026</b><span class="ok">entregue ✓</span></div>
+        <div class="row"><b>Próximo DAS</b><span class="warn">vence 20/09</span></div>
+        <div class="row"><b>Caixa do mês</b><b class="ok">+ R$ 2.340</b></div>
+        <div class="scr-cta">Emitir nota fiscal</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- barra de confiança -->
+<div class="trust" role="list" aria-label="por que confiar">
+  <div class="wrap">
+    <div role="listitem"><span class="tic">✓</span><span><b>Escritório contábil real</b><br>registrado no CRC/ES 3.764</span></div>
+    <div role="listitem"><span class="tic">✓</span><span><b>Contador responsável</b><br>pela sua contabilidade</span></div>
+    <div role="listitem"><span class="tic">✓</span><span><b>LGPD levada a sério</b><br><a href="privacidade.html">política pública</a> e clara</span></div>
+    <div role="listitem"><span class="tic">✓</span><span><b>Seus dados são seus</b><br>exportação garantida, sem prisão</span></div>
+  </div>
+</div>
+
+<!-- 2 · DORES -->
+<section>
+  <div class="wrap">
+    <span class="kicker">O que o Bolgest resolve</span>
+    <h2>As três dores que todo MEI conhece</h2>
+    <div class="grid3">
+      <div class="card"><div class="icone">⏰</div><h3>O DAS não te pega de surpresa</h3><p>O app lembra você antes do vencimento e emite a guia na hora. Chega de juros por esquecimento.</p></div>
+      <div class="card"><div class="icone">🧾</div><h3>Nota fiscal em minutos, sem portal do governo</h3><p>Emita NFS-e no padrão nacional direto do celular.</p></div>
+      <div class="card"><div class="icone">💰</div><h3>O dinheiro do negócio separado do de casa</h3><p>Veja quanto entra, quanto sai e quanto sobra de verdade.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · COMO FUNCIONA -->
+<section class="soft">
+  <div class="wrap">
+    <span class="kicker">Como funciona</span>
+    <h2>Três passos e o negócio em dia</h2>
+    <div class="passos">
+      <div class="passo"><div class="num">1</div><h3>Baixe e diga quem você é</h3><p>MEI e empresas entram com o CNPJ; autônomo, com o CPF; produtor rural, com a inscrição de produtor.</p></div>
+      <div class="passo"><div class="num">2</div><h3>Veja sua situação, seus prazos e seu caixa</h3><p>Tudo na primeira tela: o que está em dia, o que vence e quanto sobra.</p></div>
+      <div class="passo"><div class="num">3</div><h3>Toque o negócio com tudo em dia</h3><p>Guias, notas e obrigações resolvidas, com a nossa equipe contábil por trás.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · DIFERENCIAL -->
+<section>
+  <div class="wrap">
+    <div class="dif">
+      <span class="kicker">O nosso diferencial</span>
+      <h2>Sua contabilidade está inclusa</h2>
+      <p>O Bolgest não é um app que te ajuda a se virar com a burocracia: é um <strong>escritório contábil de verdade</strong> fazendo a sua contabilidade, com o app como canal. Escrituração, apurações e obrigações entram na assinatura.</p>
+      <p>Robô lembra. <strong>Contador faz.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · COMPARATIVO -->
+<section class="soft" id="comparar">
+  <div class="wrap">
+    <span class="kicker">Compare</span>
+    <h2>Onde o Bolgest é diferente</h2>
+    <p class="sub">App gratuito do governo emite guia; app de finanças não entende de MEI; contabilidade online custa a partir de R$ 195.</p>
+    <div class="tw">
+      <table class="comp">
+        <thead><tr><th></th><th>App do governo</th><th>App de finanças</th><th>Contabilidade online</th><th class="best">Bolgest</th></tr></thead>
+        <tbody>
+          <tr><td>Emite DAS e guias</td><td class="v">✓</td><td class="x">✗</td><td class="v">✓</td><td class="best v">✓</td></tr>
+          <tr><td>Entende de MEI</td><td>parcial</td><td class="x">✗</td><td class="v">✓</td><td class="best v">✓</td></tr>
+          <tr><td>Gestão do dinheiro (caixa e lucro)</td><td class="x">✗</td><td class="v">✓</td><td class="x">✗</td><td class="best v">✓</td></tr>
+          <tr><td>Contabilidade inclusa, com contador</td><td class="x">✗</td><td class="x">✗</td><td class="v">✓</td><td class="best v">✓</td></tr>
+          <tr><td>Atende autônomo sem CNPJ e produtor rural</td><td class="x">✗</td><td class="x">✗</td><td>raro</td><td class="best v">✓</td></tr>
+          <tr><td>Preço mensal</td><td>grátis</td><td>R$ 20 a 40</td><td>R$ 195+</td><td class="best">a partir de R$ 49,90</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · PLANOS -->
+<section id="planos">
+  <div class="wrap">
+    <span class="kicker">Planos</span>
+    <h2>Um plano pro seu perfil</h2>
+    <div class="planos-head">
+      <span class="chip">🎁 30 dias grátis pra testar</span>
+      <span class="chip">⭐ Preço de fundador travado por 12 meses na semana de lançamento</span>
+    </div>
+    <div class="gridp">
+      <div class="plano destaque">
+        <span class="maisvendido">MAIS ESCOLHIDO</span>
+        <span class="selo">contabilidade inclusa</span>
+        <h3>MEI</h3><div class="tag">Pra quem toca tudo sozinho</div>
+        <div class="preco">R$ 49,90<small>/mês</small></div>
+        <ul><li>DAS emitido e lembrado</li><li>DASN entregue sem drama</li><li>Situação do CNPJ sempre à vista</li><li>Nota fiscal no padrão nacional</li></ul>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'mei'})">Começar grátis</a>
+      </div>
+      <div class="plano">
+        <span class="selo">contabilidade inclusa</span>
+        <h3>MEI com empregado</h3><div class="tag">Folha e obrigações do seu funcionário, resolvidas</div>
+        <div class="preco">R$ 99,90<small>/mês</small></div>
+        <ul><li>Tudo do plano MEI</li><li>Folha de pagamento do empregado</li><li>eSocial e encargos em dia</li><li>Férias e 13º calculados</li></ul>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'mei_empregado'})">Começar grátis</a>
+      </div>
+      <div class="plano">
+        <span class="selo">contabilidade inclusa</span>
+        <h3>Autônomo</h3><div class="tag">Carnê-leão e INSS em dia, sem CNPJ</div>
+        <div class="preco">R$ 159,90<small>/mês</small></div>
+        <ul><li>Livro caixa organizado</li><li>Carnê-leão apurado todo mês</li><li>Guia do INSS na mão</li><li>IRPF consolidado no fim do ano</li></ul>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'autonomo'})">Começar grátis</a>
+      </div>
+      <div class="plano">
+        <span class="selo">contabilidade inclusa</span>
+        <h3>Produtor Rural</h3><div class="tag">Livro caixa rural, FUNRURAL e nota de produtor</div>
+        <div class="preco">R$ 199,00<small>/mês</small></div>
+        <ul><li>LCDPR escriturado</li><li>FUNRURAL apurado</li><li>ITR e anexo rural do IRPF</li><li>Notas de produtor sob controle</li></ul>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'rural'})">Começar grátis</a>
+        <p class="rural-nota">disponível para produtores do Espírito Santo</p>
+      </div>
+      <div class="plano">
+        <span class="selo">contabilidade inclusa</span>
+        <h3>Prestador de Serviço</h3><div class="tag">Contabilidade completa da sua empresa, no bolso</div>
+        <div class="preco">R$ 258,00<small>/mês</small></div>
+        <ul><li>Escrituração contábil completa</li><li>Apurações e obrigações do Simples</li><li>Folha de até 2 empregados</li><li>Balanço e demonstrações anuais</li></ul>
+        <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('plano_click',{plano:'prestador'})">Começar grátis</a>
+      </div>
+      <div class="plano">
+        <span class="selo">contabilidade inclusa</span>
+        <h3>Prestador de Serviço Plus</h3><div class="tag">Pra empresa que cresceu</div>
+        <div class="preco">sob consulta</div>
+        <ul><li>Até 6 empregados</li><li>Até 2 estabelecimentos</li><li>Maior volume de documentos</li><li>Atendimento dedicado</li></ul>
+        <a class="btn outline" href="https://wa.me/5527988818576" onclick="track('cta_whatsapp',{pos:'plano_plus'})">Falar com a gente</a>
+      </div>
+    </div>
+    <p class="ancora">Pra comparar: contabilidade online tradicional começa em <b>R$ 195/mês</b> — e não mostra o seu caixa.</p>
+    <div class="fidelidade">Planos com vigência de 12 meses e renovação automática. Cancelamento antecipado: multa de 50% das mensalidades restantes. Cancelando durante os 30 dias de teste, não há cobrança nem multa.</div>
+  </div>
+</section>
+
+<!-- 7 · PROVA SOCIAL -->
+<section class="soft">
+  <div class="wrap">
+    <span class="kicker">Quem já usa</span>
+    <h2>Gente de verdade, negócio em dia</h2>
+    <div class="grid3">
+      <div class="card"><div class="dep"><div class="avatar" aria-hidden="true">M</div><div><p>"Nunca mais atrasei o DAS."</p><small>Maria · manicure MEI · cliente beta</small></div></div></div>
+      <div class="card"><div class="dep"><div class="avatar" aria-hidden="true">J</div><div><p>"Emiti minha primeira nota em dois minutos."</p><small>João · eletricista MEI · cliente beta</small></div></div></div>
+      <div class="card"><div class="dep"><div class="avatar" aria-hidden="true">A</div><div><p>"Finalmente sei quanto sobra no fim do mês."</p><small>Ana · prestadora de serviços · cliente beta</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <span class="kicker">Dúvidas</span>
+    <h2>Perguntas frequentes</h2>
+    <details ontoggle="if(this.open)track('faq_open',{q:'das_atrasado'})"><summary>Atrasei o DAS. E agora?</summary><p>Dá pra resolver: o app emite a guia atualizada com os acréscimos e você quita na hora. E o Bolgest te lembra dos próximos pra não acontecer de novo.</p></details>
+    <details ontoggle="if(this.open)track('faq_open',{q:'dasn'})"><summary>O que é a DASN e quando preciso entregar?</summary><p>É a declaração anual obrigatória do MEI. Pelo app, você entrega em minutos e recebe o lembrete antes do prazo.</p></details>
+    <details ontoggle="if(this.open)track('faq_open',{q:'cnpj_regular'})"><summary>Como sei se meu CNPJ está regular?</summary><p>O Bolgest consulta sua situação na Receita e te avisa se algo precisar de atenção.</p></details>
+    <details ontoggle="if(this.open)track('faq_open',{q:'nota_fiscal'})"><summary>MEI é obrigado a emitir nota fiscal?</summary><p>Pra empresa, sim; pra pessoa física, em regra não. No app você emite a NFS-e no padrão nacional quando precisar.</p></details>
+    <details ontoggle="if(this.open)track('faq_open',{q:'empresa_servicos'})"><summary>Sou uma empresa de serviços, não MEI. O Bolgest me atende?</summary><p>Sim. O plano Prestador de Serviço traz a contabilidade completa da sua empresa com contador de verdade, direto no app.</p></details>
+    <details ontoggle="if(this.open)track('faq_open',{q:'quanto_custa'})"><summary>Quanto custa e como funciona o teste?</summary><p>Os planos começam em R$ 49,90 por mês, com a contabilidade inclusa. Todo novo cliente tem 30 dias de acesso completo, grátis: cancelando dentro do teste, não há cobrança nenhuma.</p></details>
+    <details ontoggle="if(this.open)track('faq_open',{q:'cancelamento'})"><summary>Posso cancelar quando quiser?</summary><p>Pode, pelo app ou pelos nossos canais. Durante o teste de 30 dias e nos 7 dias após a primeira cobrança, sem custo. Depois disso os planos têm vigência de 12 meses; o cancelamento antecipado tem multa de 50% das mensalidades restantes, tudo informado antes de você assinar. Detalhes nos <a href="termos.html">Termos de Uso</a>.</p></details>
+  </div>
+</section>
+
+<!-- 9 · CTA FINAL -->
+<section>
+  <div class="wrap">
+    <div class="final">
+      <h2>Gestão de bolso com contador de verdade.</h2>
+      <p class="sub" style="margin:0 auto">30 dias grátis. Sua contabilidade inclusa.</p>
+      <div class="badges">
+        <a class="store play" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('cta_play',{pos:'final'})"><small>Disponível no</small><b>Google Play</b></a>
+        <span class="store apple"><small>App Store</small><b>Em breve</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#" aria-label="Bolgest — voltar ao topo">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#38E700"/><text x="32" y="44" font-family="Montserrat,Arial" font-size="28" font-weight="800" text-anchor="middle" fill="#0c2200">bg</text></svg>
+        Bol<span>gest</span>
+      </a>
+      <p style="margin-top:10px">Contabilidade inclusa na assinatura, do MEI à prestadora de serviços.</p>
+      <p style="margin-top:8px">DANZI &amp; RIBEIRO CONTADORES ASSOCIADOS LTDA<br>CNPJ 10.520.819/0001-33 · CRC/ES 3.764<br>Cachoeiro de Itapemirim · ES</p>
+    </div>
+    <div>
+      <h4>Contato</h4>
+      <p><a href="mailto:falecom@bolgest.com">falecom@bolgest.com</a><br><a href="https://wa.me/5527988818576" onclick="track('cta_whatsapp',{pos:'footer'})">WhatsApp (27) 98881-8576</a></p>
+      <h4 style="margin-top:14px">Redes</h4>
+      <p><a href="#">Instagram</a> · <a href="#">TikTok</a> · <a href="#">YouTube</a> · <a href="#">LinkedIn</a></p>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <p><a href="privacidade.html">Política de Privacidade</a><br><a href="termos.html">Termos de Uso</a></p>
+    </div>
+  </div>
+  <div class="wrap legal">© 2026 Bolgest · bolgest.com — Todos os direitos reservados.</div>
+</footer>
+
+<a class="zap" href="https://wa.me/5527988818576" aria-label="Falar no WhatsApp" onclick="track('cta_whatsapp',{pos:'float'})">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.2c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.9 16.9c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.3.3-4.4-.9-3.7-1.5-6-5.3-6.2-5.5-.2-.2-1.5-2-1.5-3.8s1-2.7 1.3-3c.3-.4.7-.5 1-.5h.7c.2 0 .5-.1.8.6.3.8 1.1 2.7 1.2 2.9.1.2.2.4 0 .7-.1.3-.2.4-.4.7l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1.9-.2 1.7z"/></svg>
+</a>
+
+<div class="stickybar" aria-hidden="false">
+  <a class="p" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" onclick="track('cta_play',{pos:'sticky'})">🎁 30 dias grátis · Baixar o app</a>
+</div>
+
+</body>
+</html>
