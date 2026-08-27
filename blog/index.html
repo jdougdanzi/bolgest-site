@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog do Bolgest</title>
+<meta name="description" content="Impostos, lucro e burocracia explicados em português: MEI, carnê-leão, Fator R e o dinheiro que sobra — pelo escritório por trás do Bolgest.">
+<link rel="canonical" href="https://bolgest.com/blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog do Bolgest">
+<meta property="og:description" content="Impostos, lucro e burocracia explicados em português — pelo escritório por trás do Bolgest.">
+<meta property="og:url" content="https://bolgest.com/blog">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://bolgest.com/assets/icon-512.png">
+<link rel="icon" type="image/png" href="../assets/favicon-64.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"Blog do Bolgest","url":"https://bolgest.com/blog","inLanguage":"pt-BR","publisher":{"@type":"Organization","name":"Bolgest","url":"https://bolgest.com"}}
+</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat:wght@800&family=Poppins:wght@400;600;700&display=swap">
+<style>
+:root{--verde:#38E700;--sust:#65B20A;--verdetx:#3f7a06;--ink:#0c2200;--papel:#faf7ef;--creme:#f2eee2;--sub:#5c6b52;--linha:#e5e8df;--vazio:#c2410c}
+*{margin:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;color:var(--ink);background:var(--papel);line-height:1.7;font-size:16px}
+header{position:sticky;top:0;background:#faf7efe8;backdrop-filter:blur(8px);z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:880px;margin:0 auto;padding:14px 20px}
+.nav .lgimg{height:34px;display:block}
+@media(max-width:640px){.nav .lgimg{height:26px}}
+.volta{color:var(--verdetx);text-decoration:none;font-weight:600;font-size:.85rem}
+main{max-width:880px;margin:0 auto;padding:36px 20px 70px}
+.marca{background:linear-gradient(transparent 58%,#b9f58e 58%);padding:0 2px}
+.hand{font-family:Caveat,cursive;color:var(--sust)}
+a{color:var(--verdetx)}
+/* índice */
+.hero-blog{text-align:center;padding:16px 0 34px}
+.hero-blog h1{font-family:Montserrat,sans-serif;font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.15;margin-bottom:8px}
+.hero-blog p{color:var(--sub);max-width:540px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.card-art{background:#fff;border-radius:6px 22px 22px 22px;padding:26px;box-shadow:0 14px 34px #0c220014;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:.15s;position:relative}
+.card-art:hover{transform:translateY(-3px)}
+.card-art .tag{align-self:flex-start;background:#e9fbdc;color:#1d6606;font-size:.68rem;font-weight:700;padding:3px 12px;border-radius:99px;margin-bottom:10px}
+.card-art h2{font-family:Montserrat,sans-serif;font-size:1.15rem;line-height:1.25;margin-bottom:8px}
+.card-art p{color:var(--sub);font-size:.88rem;flex:1}
+.card-art .meta{font-family:Caveat,cursive;color:var(--sust);font-size:1.1rem;margin-top:14px}
+.em-breve{opacity:.6}
+.em-breve:hover{transform:none}
+/* artigo */
+.folha{background:#fff;border-radius:6px 26px 26px 26px;padding:44px 46px;box-shadow:0 18px 44px #0c220014}
+@media(max-width:640px){.folha{padding:28px 20px}}
+article{max-width:68ch;margin:0 auto}
+article h1{font-family:Montserrat,sans-serif;font-size:clamp(1.7rem,4.5vw,2.4rem);line-height:1.18;margin-bottom:6px}
+.byline{font-family:Caveat,cursive;color:var(--sust);font-size:1.25rem;display:block;margin-bottom:24px}
+article h2{font-family:Montserrat,sans-serif;font-size:1.25rem;margin:34px 0 10px}
+article p{margin:12px 0}
+article ul{margin:12px 0 12px 22px}
+article li{margin:6px 0}
+article strong{font-weight:700}
+.cta-meio{background:var(--creme);border-radius:18px;padding:22px 24px;margin:28px 0;text-align:center}
+.cta-meio p{margin:0 0 12px;font-weight:600}
+.btn{display:inline-block;background:var(--verde);color:#123300;font-weight:700;padding:13px 26px;border-radius:99px;box-shadow:0 6px 0 #4d8a06;text-decoration:none;transition:.12s}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #4d8a06}
+.aviso{border-left:4px solid var(--sust);background:var(--papel);padding:12px 16px;border-radius:0 12px 12px 0;font-size:.88rem;color:var(--sub);margin:26px 0}
+.leia{margin-top:36px;padding-top:22px;border-top:1px dashed var(--linha)}
+.leia h3{font-family:Caveat,cursive;color:var(--sust);font-size:1.35rem;font-weight:600;margin-bottom:10px}
+.leia ul{list-style:none;margin:0;padding:0}
+.leia li{margin:6px 0}
+.zap{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 0 #128C4B,0 14px 30px #0c220033;z-index:70;transition:.12s}
+.zap:hover{transform:translateY(2px)}
+.zap svg{width:32px;height:32px;fill:#fff}
+</style>
+<script>
+var GA_ID='G-XXXXXXXXXX';
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+if(!/X{4}/.test(GA_ID)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID);}
+document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;
+ if(/play\.google/.test(a.href))try{gtag('event','cta_play',{pagina:location.pathname})}catch(x){}
+ if(/wa\.me/.test(a.href))try{gtag('event','cta_whatsapp',{pagina:location.pathname})}catch(x){}});
+</script>
+<style>
+.rdp{background:#0c2200;color:#cfd8c6;padding:52px 0 0;margin-top:56px;font-size:.85rem;text-align:left;line-height:1.7}
+.rdp a{color:#b9f58e;text-decoration:none}
+.rdp a:hover{text-decoration:underline}
+.rdp-cols{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:36px;max-width:1020px;margin:0 auto;padding:0 22px 40px}
+@media(max-width:880px){.rdp-cols{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.rdp-cols{grid-template-columns:1fr;text-align:center}.rdp-redes,.rdp-lojas{justify-content:center}.rdp ul{align-items:center}}
+.rdp h4{color:#fff;font-family:Poppins,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+.rdp h4+h4, .rdp ul+h4, .rdp p+h4, .rdp div+h4{margin-top:20px}
+.rdp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.rdp p{margin:0 0 8px}
+.rdp-marca img{height:34px;margin-bottom:12px;display:inline-block}
+.rdp-lojas{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.rdp-loja{display:inline-flex;align-items:center;gap:9px;background:#081a04;border:1px solid #2e4420;border-radius:11px;padding:7px 14px;color:#fff;min-width:158px}
+.rdp-loja svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.rdp-loja small{display:block;font-size:.56rem;opacity:.75;line-height:1.1;letter-spacing:.06em}
+.rdp-loja b{font-size:.86rem;line-height:1.15}
+.rdp-loja.off{opacity:.55}
+.rdp-redes{display:flex;gap:10px;margin-top:4px}
+.rdp-rede{width:36px;height:36px;border-radius:50%;background:#24401a;display:flex;align-items:center;justify-content:center;transition:.15s}
+.rdp-rede:hover{background:#65B20A}
+.rdp-rede svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.rdp-prof{border-top:1px solid #24401a;text-align:center;padding:16px 22px}
+.rdp-base{border-top:1px solid #24401a;text-align:center;padding:16px 22px 20px;font-size:.73rem;color:#8fa080}
+</style></head>
+<body>
+<header><nav class="nav"><a href="../"><img class="lgimg" src="../assets/logo-escuro.png" alt="Bolgest"></a><a class="volta" href="../">← voltar ao site</a></nav></header>
+<main>
+<div class="hero-blog">
+<h1>O blog de quem quer <span class="marca">sobrar dinheiro</span></h1>
+<p>Impostos, lucro e burocracia explicados em português — pelo escritório contábil por trás do Bolgest.</p>
+</div>
+<div class="cards">
+<a class="card-art" href="medico-pode-ser-mei">
+<span class="tag">🩺 médicos</span>
+<h2>Médico pode ser MEI? Não — e o que fazer em vez disso</h2>
+<p>A porta mais barata da formalização está fechada pra quem tem CRM. Os dois caminhos que sobram — e qual deixa mais dinheiro no bolso.</p>
+<span class="meta">↳ 27 de agosto de 2026 · 5 min</span>
+</a>
+<div class="card-art em-breve">
+<span class="tag">simples nacional</span>
+<h2>Como funciona o Fator R</h2>
+<p>A alavanca que tira sua empresa do anexo caro do Simples.</p>
+<span class="meta">↳ em breve</span>
+</div>
+<div class="card-art em-breve">
+<span class="tag">🧠 autônomos</span>
+<h2>Carnê-leão: quem precisa e como não cair na malha</h2>
+<p>O imposto mensal que quase ninguém faz direito.</p>
+<span class="meta">↳ em breve</span>
+</div>
+<div class="card-art em-breve">
+<span class="tag">⚖️ advogados</span>
+<h2>Anexo IV: o INSS que não vem no DAS</h2>
+<p>A cobrança surpresa que pega quase toda sociedade de advocacia.</p>
+<span class="meta">↳ em breve</span>
+</div>
+</div>
+</main>
+<footer class="rdp">
+  <div class="rdp-cols">
+    <div class="rdp-marca">
+      <img src="../assets/logo-verde.png" alt="Bolgest">
+      <p>Gestão de bolso com contador de verdade. Contabilidade inclusa na assinatura, do MEI à prestadora de serviços.</p>
+      <div class="rdp-lojas">
+        <a class="rdp-loja" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest" aria-label="Baixar no Google Play"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z" />
+  <path d="M15 9l-10.5 11.5" />
+  <path d="M4.5 3.5l10.5 11.5" /></svg><span><small>DISPONÍVEL NO</small><b>Google Play</b></span></a>
+        <span class="rdp-loja off" aria-label="Em breve na App Store"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8.286 7.008c-3.216 0 -4.286 3.23 -4.286 5.92c0 3.229 2.143 8.072 4.286 8.072c1.165 -.05 1.799 -.538 3.214 -.538c1.406 0 1.607 .538 3.214 .538s4.286 -3.229 4.286 -5.381c-.03 -.011 -2.649 -.434 -2.679 -3.23c-.02 -2.335 2.589 -3.179 2.679 -3.228c-1.096 -1.606 -3.162 -2.113 -3.75 -2.153c-1.535 -.12 -3.032 1.077 -3.75 1.077c-.729 0 -2.036 -1.077 -3.214 -1.077z" />
+  <path d="M12 4a2 2 0 0 0 2 -2a2 2 0 0 0 -2 2" /></svg><span><small>EM BREVE NA</small><b>App Store</b></span></span>
+      </div>
+    </div>
+    <div>
+      <h4>Institucional</h4>
+      <ul>
+        <li>DANZI &amp; RIBEIRO CONTADORES ASSOCIADOS LTDA</li>
+        <li>CNPJ 10.520.819/0001-33</li>
+        <li>CRC/ES 3.764 · escritório desde 2008</li>
+        <li>Rua Rafael Dias Pacheco, 159 · Sala A · Recanto</li>
+        <li>Cachoeiro de Itapemirim/ES · CEP 29.303-120</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Atendimento</h4>
+      <ul>
+        <li><a href="mailto:falecom@bolgest.com">falecom@bolgest.com</a></li>
+        <li><a href="https://wa.me/5527988818576">WhatsApp (27) 98881-8576</a></li>
+        <li>Chat no app · dias úteis, 8h às 18h</li>
+        <li><a href="mailto:danzi@pjmei.app">Encarregado de dados (LGPD)</a></li>
+      </ul>
+      <h4>Redes</h4>
+      <div class="rdp-redes">
+        <a class="rdp-rede" href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+  <path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+  <path d="M16.5 7.5v.01" /></svg></a>
+        <a class="rdp-rede" href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg></a>
+        <a class="rdp-rede" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" />
+  <path d="M10 9l5 3l-5 3z" /></svg></a>
+        <a class="rdp-rede" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" /></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="../privacidade.html">Política de Privacidade</a></li>
+        <li><a href="../termos.html">Termos de Uso</a></li>
+        <li><a href="../contrato.html">Contrato de prestação de serviços</a></li>
+        <li><a href="../avulsos.html">Tabela de serviços avulsos</a></li>
+      </ul>
+      <h4>O app</h4>
+      <ul>
+        <li><a href="../#planos">Planos e preços</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Baixar o app</a></li>
+        <li><a href="https://wa.me/5527988818576">Falar com um contador</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rdp-prof"><strong style="color:#fff">Pra sua profissão:</strong> Bolgest para <a href="../medicos.html">Médicos</a>, <a href="../dentistas.html">Dentistas</a>, <a href="../psicologos.html">Psicólogos</a> e <a href="../advogados.html">Advogados</a></div>
+  <div class="rdp-base">© 2026 Bolgest · bolgest.com — Todos os direitos reservados. Bolgest é um produto do escritório DANZI &amp; RIBEIRO CONTADORES ASSOCIADOS LTDA sobre a plataforma PJMEI.</div>
+</footer><a class="zap" href="https://wa.me/5527988818576?text=Oi!%20Li%20o%20blog%20e%20quero%20saber%20mais%20sobre%20o%20Bolgest" aria-label="Chamar no WhatsApp">
+<svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.2c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.9 16.9c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.3.3-4.4-.9-3.7-1.5-6-5.3-6.2-5.5-.2-.2-1.5-2-1.5-3.8s1-2.7 1.3-3c.3-.4.7-.5 1-.5h.7c.2 0 .5-.1.8.6.3.8 1.1 2.7 1.2 2.9.1.2.2.4 0 .7-.1.3-.2.4-.4.7l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1.9-.2 1.7z"/></svg></a>
+</body></html>
