@@ -23,6 +23,18 @@ p{color:var(--sub);margin:10px 0}
 .btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #4d8a06}
 footer{padding:26px 20px;text-align:center;font-size:.78rem;color:var(--sub)}
 footer a{color:var(--verdetx)}
+
+/* alvos de toque no celular (mín. 44px) */
+@media(max-width:820px){
+  .assist input{width:26px;height:26px;margin-top:2px}
+  .assist{padding:10px 0;align-items:center}
+  .rdp ul li a,.rdp-prof a{display:inline-block;padding:7px 0;min-height:24px}
+  .rdp-rede{width:44px;height:44px}
+  .nav .prof a,.nav a[href="/blog/"]{padding:10px 6px;display:inline-block}
+  .pf{padding:13px 20px}
+  .cmp-wrap summary{padding:8px 0}
+  details summary{padding:6px 0}
+}
 </style>
 <style>
 .zap{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 0 #128C4B,0 14px 30px #0c220033;z-index:70;transition:.12s}
