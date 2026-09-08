@@ -1,28 +1,19 @@
 <!doctype html>
-<html lang="pt-BR">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bolgest para Médicos</title>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consulta CNPJ grátis | Situação cadastral, CNAE e Simples — Bolgest</title>
+<meta name="description" content="Consulte qualquer CNPJ de graça: razão social, situação cadastral na Receita Federal, data de abertura, CNAE, porte, endereço e se é optante do Simples Nacional ou MEI. Sem cadastro.">
+<link rel="canonical" href="https://bolgest.com/consulta-cnpj">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Consulta CNPJ grátis — Bolgest">
+<meta property="og:description" content="Situação cadastral, CNAE, porte e Simples Nacional. Direto da base da Receita Federal, sem cadastro.">
+<meta property="og:url" content="https://bolgest.com/consulta-cnpj">
 <meta property="og:image" content="https://bolgest.com/assets/og-bolgest.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="description" content="Contabilidade pra médicos com contador incluso: Fator R conferido, carnê-leão e livro-caixa no automático. Simule seus impostos. 30 dias grátis.">
-<link rel="canonical" href="https://bolgest.com/medicos.html">
-<!-- GA4 · troque o ID e o script ativa sozinho -->
-<script>
-var GA_ID='G-RY2NR9ZSQX';
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
-if(!/X{4}/.test(GA_ID)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID);}
-document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;
- if(/play\.google/.test(a.href))try{gtag('event','cta_play',{pagina:location.pathname})}catch(x){}
- if(/wa\.me/.test(a.href))try{gtag('event','cta_whatsapp',{pagina:location.pathname})}catch(x){}});
-</script>
 <link rel="icon" type="image/png" href="assets/favicon-64.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=IBM+Plex+Mono:wght@500;600&family=Montserrat:wght@800&family=Poppins:wght@400;600;700&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Consulta CNPJ grátis do Bolgest","url":"https://bolgest.com/consulta-cnpj","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"inLanguage":"pt-BR","publisher":{"@type":"Organization","name":"Bolgest"}}
+</script>
 <style>
 :root{--verde:#38E700;--sust:#65B20A;--verdetx:#3f7a06;--lucro:#1d8a06;--vazio:#c2410c;--ink:#0c2200;--papel:#faf7ef;--creme:#f2eee2;--sub:#5c6b52;--linha:#e5e8df}
 *{margin:0;box-sizing:border-box}
@@ -151,7 +142,6 @@ footer a{color:#b9f58e}
 .rdp-prof{border-top:1px solid #24401a;text-align:center;padding:16px 22px}
 .rdp-base{border-top:1px solid #24401a;text-align:center;padding:16px 22px 20px;font-size:.73rem;color:#8fa080}
 </style>
-<script defer src="/assets/smart-cta.js"></script>
 <style>
 @media(max-width:820px){
   .rdp .rdp-rede{width:44px;height:44px}
@@ -159,129 +149,64 @@ footer a{color:#b9f58e}
   .nav .lg,.nav a.lg{min-height:44px;align-items:center}
 }
 </style>
-</head>
-<body>
-<header><nav class="nav"><a href="index.html"><img class="lgimg" src="assets/logo-escuro.png" alt="Bolgest"></a><a class="btn" href="#calculadora">Simular meus impostos</a></nav></header>
+<style>
+.busca{max-width:560px;margin:0 auto}
+.campo{display:flex;gap:10px;background:#fff;border-radius:99px;padding:8px 8px 8px 22px;box-shadow:0 16px 40px #0c220018;align-items:center}
+.campo input{flex:1;border:none;outline:none;font-family:"IBM Plex Mono",monospace;font-size:1rem;background:none;min-width:0;color:var(--ink)}
+.campo button{background:var(--verde);color:#123300;border:none;border-radius:99px;padding:14px 26px;font-family:Poppins;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 5px 0 #4d8a06}
+.campo button:disabled{opacity:.6}
+#msg{text-align:center;margin-top:14px;font-size:.9rem;color:var(--sub);min-height:22px}
+#msg.erro{color:var(--vazio);font-weight:600}
+.res{background:#fff;border-radius:6px 26px 26px 26px;padding:30px 32px;box-shadow:0 18px 44px #0c220014;margin-top:26px;background-image:repeating-linear-gradient(#fff 0 33px,#f2f5ec 33px 34px)}
+.res h2{font-size:1.25rem;margin-bottom:2px}
+.sit{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 12px;border-radius:99px;margin:8px 0 16px}
+.sit.ativa{background:#e9fbdc;color:#1d6606} .sit.baixada{background:#fdeae0;color:var(--vazio)}
+.linha{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px dashed var(--linha);font-size:.9rem}
+.linha:last-child{border:none} .linha span{color:var(--sub)} .linha b{text-align:right;max-width:60%}
+.tag{display:inline-block;font-size:.7rem;font-weight:700;padding:2px 10px;border-radius:99px;background:#e9fbdc;color:#1d6606;margin-left:6px}
+.tag.n{background:#f0f2ec;color:var(--sub)}
+</style>
+</head><body>
+<header><nav class="nav"><a href="/"><img class="lgimg" src="assets/logo-escuro.png" alt="Bolgest"></a><a class="btn" href="/#planos">Conhecer o Bolgest</a></nav></header>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="blob b1"></div><div class="blob b2"></div>
-  <div class="wrap">
-    <span class="selo">🩺 Bolgest para Médicos</span>
-    <h1>Plantão dado, imposto certo — e você sabendo <span class="marca">quanto sobrou</span>.</h1>
-    <p class="sub">Médico não pode ser MEI. Sobram dois caminhos — autônomo com carnê-leão ou PJ com contador — e nos dois o Bolgest cuida de tudo, com contador de verdade incluso na assinatura.</p>
-    <a class="btn" href="#calculadora">Descobrir minha melhor forma de lucrar</a>
-  </div>
+<div class="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap">
+<span class="selo">🔎 ferramenta grátis · sem cadastro</span>
+<h1>Consulta de <span class="marca">CNPJ grátis</span></h1>
+<p class="sub">Situação cadastral, CNAE, porte, endereço e Simples Nacional — direto da base pública da Receita Federal.</p>
+<div class="busca">
+  <form class="campo" id="f">
+    <input id="cnpj" inputmode="numeric" placeholder="00.000.000/0000-00" aria-label="CNPJ" maxlength="18">
+    <button id="b" type="submit">Consultar</button>
+  </form>
+  <div id="msg"></div>
+  <div id="res"></div>
 </div>
+</div></div>
 
-<!-- DORES -->
-<section style="padding-top:20px">
-  <div class="wrap">
-    <h2 class="t">Três jeitos de um médico <span class="marca">doar dinheiro</span> ao governo</h2>
-    <div class="g3" style="margin-top:30px">
-      <div class="vaza"><span class="n">vazamento nº 1</span><h3>Anexo errado no Simples</h3><p>Medicina cai por padrão no Anexo V: 15,5% de imposto. Com o Fator R bem calibrado, vai pro Anexo III: a partir de 6%. São até 9,5 pontos de diferença — todo mês.</p></div>
-      <div class="vaza"><span class="n">vazamento nº 2</span><h3>Carnê-leão das múltiplas fontes</h3><p>Consultório, particulares e RPA são carnê-leão mensal obrigatório. Atrasou: multa. Errou: malha fina — é o gatilho nº 1 de malha pra médicos.</p></div>
-      <div class="vaza"><span class="n">vazamento nº 3</span><h3>Livro-caixa não feito</h3><p>Aluguel do consultório, secretária, materiais: tudo dedutível — se escriturado mês a mês. Sem livro-caixa, o desconto vira imposto pago à toa.</p></div>
-    </div>
-  </div>
-</section>
+<section style="padding-top:10px"><div class="wrap">
+<h2 class="t">O que esta consulta mostra</h2>
+<p class="sub2">os dados públicos que a Receita Federal disponibiliza sobre qualquer empresa</p>
+<div class="g3">
+  <div class="mec"><span class="hand">está ativa?</span><h3>Situação cadastral</h3><p>Ativa, suspensa, inapta ou baixada — e a data. É o primeiro item que banco e cliente conferem.</p></div>
+  <div class="mec"><span class="hand">o que ela faz</span><h3>CNAE e porte</h3><p>Atividade principal, atividades secundárias, porte (MEI, ME, EPP) e natureza jurídica.</p></div>
+  <div class="mec"><span class="hand">como paga imposto</span><h3>Simples e MEI</h3><p>Se é optante do Simples Nacional e se está enquadrada como MEI, com as datas de opção.</p></div>
+</div>
+</div></section>
 
-<!-- CALCULADORA -->
-<section id="calculadora" style="padding-top:10px">
-  <div class="wrap">
-    <h2 class="t">Quanto você pagaria em cada caminho?</h2>
-    <p class="sub2">arrasta o faturamento e compara — a melhor forma de lucrar acende em verde</p>
-    <div class="calc">
-      <span class="lbl">↳ simule com o seu faturamento mensal</span>
-      <div class="controle">
-        <label for="fat">Faturamento/mês</label>
-        <input type="range" id="fat" min="5000" max="100000" step="1000" value="30000">
-        <span class="valor mono" id="fat-out">R$ 30.000</span>
-      </div>
-      <p class="aviso-folha">no cenário com Fator R, consideramos pró-labore de 28% do faturamento (o mínimo pra destravar o Anexo III)</p>
-      <div class="cenarios">
-        <div class="cen" id="c-pf">
-          <h3>Pessoa Física</h3><span class="como">carnê-leão + INSS autônomo</span>
-          <div class="imp mono" id="pf-imp">—</div><div class="aliq" id="pf-aliq">—</div>
-          <div class="sobra">sobra estimada<br><b id="pf-sobra">—</b></div>
-        </div>
-        <div class="cen" id="c-v">
-          <h3>PJ · Anexo V</h3><span class="como">Simples sem Fator R</span>
-          <div class="imp mono" id="v-imp">—</div><div class="aliq" id="v-aliq">—</div>
-          <div class="sobra">sobra estimada<br><b id="v-sobra">—</b></div>
-        </div>
-        <div class="cen" id="c-r">
-          <span class="melhor">MELHOR FORMA DE LUCRAR</span>
-          <h3>PJ · Anexo III</h3><span class="como">com Fator R (pró-labore 28%)</span>
-          <div class="imp mono" id="r-imp">—</div><div class="aliq" id="r-aliq">—</div>
-          <div class="sobra">sobra estimada<br><b id="r-sobra">—</b></div>
-        </div>
-      </div>
-      <div class="economia">
-        <p>escolhendo o melhor caminho em vez do pior, você deixa de doar</p>
-        <b id="eco">—</b><span style="font-size:.85rem;color:#4d5b44"> por ano</span>
-        <p style="margin-top:10px">Quem faz esse enquadramento por você é o <strong>contador incluso</strong> do Bolgest — e o app mostra o SOBROU todo dia.</p>
-        <a class="btn" style="margin-top:14px" href="#planos">Quero pagar o imposto certo</a>
-      </div>
-      <p class="disclaimer">Simulação simplificada e educativa (tabelas IRPF/INSS 2025 e alíquotas do Simples Nacional por faixa de faturamento anualizado, sem ISS de autônomo, sem deduções de livro-caixa e sem variações municipais). O número exato depende do seu caso e é calculado pelo contador na sua adesão — de graça, nos 30 dias de teste.</p>
-    </div>
-  </div>
-</section>
+<section style="padding-top:0"><div class="wrap"><div class="dif">
+<h2 class="t" style="margin-bottom:6px">Consultou e o CNPJ está <span class="marca">irregular</span>?</h2>
+<p>Situação suspensa, inapta ou baixada trava emissão de nota, empréstimo e licitação — e às vezes o dono nem sabe. O Bolgest acompanha a situação do seu CNPJ todo mês, com contador de verdade incluso na assinatura.</p>
+<a class="btn" style="margin-top:20px" href="/#planos">Ver os planos →</a>
+<span class="hand" style="font-size:1.3rem;display:block;margin-top:14px">↳ regularização de CNPJ a partir de R$ 199 na tabela de avulsos</span>
+</div></div></section>
 
-<!-- COMO O BOLGEST RESOLVE -->
-<section style="padding-top:20px">
-  <div class="wrap">
-    <h2 class="t">O que o Bolgest faz pelo seu CRM</h2>
-    <div class="g3" style="margin-top:30px">
-      <div class="mec"><span class="hand">enquadramento vigiado</span><h3>Fator R conferido por contador</h3><p>Pró-labore calibrado e anexo certo, revisados pela equipe contábil — não por um robô sozinho.</p></div>
-      <div class="mec"><span class="hand">plantões organizados</span><h3>Carnê-leão e livro-caixa no automático</h3><p>Cada fonte pagadora no lugar: o que é PF entra no carnê-leão com as deduções escrituradas.</p></div>
-      <div class="mec"><span class="hand">o número que importa</span><h3>SOBROU por fonte</h3><p>Quanto cada hospital, clínica e convênio deixa de verdade — pra você escolher plantão com conta feita.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- GUARDIÃO -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="dif">
-      <h2 class="t" style="margin-bottom:0">A IA lembra. <span class="marca">O contador garante.</span></h2>
-      <p>Escritório DANZI &amp; RIBEIRO, CRC/ES 3.764, desde 2008 — a contabilidade da sua PJ ou o seu carnê-leão inclusos na assinatura, com gente que responde em português, não em contabilês.</p>
-      <span class="hand" style="font-size:1.35rem;display:block;margin-top:14px">— seu guardião do lucro, de plantão</span>
-    </div>
-  </div>
-</section>
-
-<!-- PLANOS -->
-<section id="planos" style="padding-top:0">
-  <div class="wrap">
-    <h2 class="t">Dois caminhos, um app</h2>
-    <p class="sub2">🩺 30 dias grátis em todos</p>
-    <div class="gp">
-      <div class="plano"><h3>Médico Autônomo (PF)</h3><span class="anc">cerca de duas horas de plantão por mês</span><div class="preco">R$ 259,90<small>/mês</small></div><ul><li>Carnê-leão apurado todo mês</li><li>Livro-caixa que deduz consultório</li><li>GPS do INSS na mão</li><li>IRPF das múltiplas fontes consolidado</li></ul><a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Começar 30 dias grátis</a></div>
-      <div class="plano hot"><span class="best">PRA MAIORIA DOS MÉDICOS</span><h3>Médico PJ</h3><span class="anc">menos que três horas de plantão por mês</span><div class="preco">R$ 288,00<small>/mês</small></div><ul><li>Escrituração contábil completa</li><li>Enquadramento com Fator R conferido</li><li>Pró-labore e folha da secretária</li><li>SOBROU por fonte pagadora</li></ul><a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Começar 30 dias grátis</a></div>
-      <div class="plano"><h3>Clínica</h3><span class="anc">pra quem já tem equipe</span><div class="preco">sob consulta</div><ul><li>Até 6 empregados</li><li>Até 2 estabelecimentos</li><li>Atendimento dedicado</li></ul><a class="btn soft" href="https://wa.me/5527988818576?text=Oi!%20Tenho%20uma%20cl%C3%ADnica%20e%20quero%20saber%20do%20Bolgest">Falar com a gente</a></div>
-    </div>
-    <p style="margin-top:18px;font-size:.85rem;color:var(--sub);text-align:center">Vigência de 12 meses com renovação automática · cancelamento antecipado: multa de 50% das mensalidades restantes · cancelando nos 30 dias de teste, nenhuma cobrança.</p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <h2 class="t">Perguntas de quem vive de plantão</h2>
-    <details><summary>Médico pode ser MEI?</summary><p>Não. Medicina é atividade regulamentada de cunho intelectual, vedada no MEI. Os caminhos são autônomo PF (carnê-leão) ou PJ — e como PJ o contador é obrigatório por lei. Os dois estão cobertos aqui.</p></details>
-    <details><summary>PF ou PJ: qual vale mais a pena pra mim?</summary><p>Depende do faturamento e de quanto vem de PF × PJ. A calculadora acima dá a direção; na adesão, o contador faz a conta exata com os seus números — dentro dos 30 dias grátis.</p></details>
-    <details><summary>O que é esse tal de Fator R?</summary><p>Se a sua folha + pró-labore somam 28% ou mais do faturamento, sua PJ sai do Anexo V (15,5%+) e vai pro Anexo III (a partir de 6%). É a maior alavanca de economia do médico PJ — e precisa ser acompanhada mês a mês.</p></details>
-    <details><summary>Recebo de 3 hospitais e atendo particular. Isso complica?</summary><p>É exatamente pra isso que o app existe: cada fonte no lugar certo — PJ na escrituração, PF no carnê-leão — e o SOBROU por fonte mostrando qual plantão paga melhor de verdade.</p></details>
-    <details><summary>Já tenho contador. Por que mudar?</summary><p>Se ele acompanha seu Fator R, escritura seu livro-caixa e te mostra quanto sobra por fonte, fica com ele. Se você só recebe uma guia por mês, o Bolgest faz tudo isso por menos que três horas de plantão.</p></details>
-    <div class="final">
-      <h2 class="t" style="margin-bottom:4px">Todo plantão sem conta feita é lucro <span class="marca">doado</span>.</h2>
-      <span class="hand" style="font-size:1.4rem;display:block;margin-bottom:20px">↳ 30 dias grátis, com o contador conferindo seu enquadramento</span>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Começar agora</a>
-    </div>
-  </div>
-</section>
-
+<section style="padding-top:0"><div class="wrap">
+<h2 class="t">Perguntas frequentes</h2>
+<details><summary>De onde vêm esses dados?</summary><p>Da base pública de CNPJ da Receita Federal, consultada em tempo real. São os mesmos dados do cartão CNPJ — nada aqui é estimativa nossa.</p></details>
+<details><summary>Preciso me cadastrar ou pagar?</summary><p>Não. A consulta é livre e gratuita, sem login. Se quiser cuidar da contabilidade da empresa, aí sim conheça os planos do Bolgest.</p></details>
+<details><summary>Meu CNPJ aparece como inapto. E agora?</summary><p>Inapta costuma ser falta de entrega de declaração. Dá pra regularizar — no Bolgest isso está na tabela de serviços avulsos (a partir de R$ 199) ou incluso no acompanhamento mensal.</p></details>
+<details><summary>Posso consultar qualquer empresa?</summary><p>Sim, qualquer CNPJ ativo ou baixado. É útil pra conferir um fornecedor antes de fechar negócio ou um cliente antes de emitir nota.</p></details>
+</div></section>
 <footer class="rdp">
   <div class="rdp-cols">
     <div class="rdp-marca">
@@ -346,62 +271,61 @@ footer a{color:#b9f58e}
         <li><a href="https://play.google.com/store/apps/details?id=app.pjmei.bolgest">Baixar o app</a></li>
         <li><a href="https://wa.me/5527988818576">Falar com um contador</a></li>
         <li><a href="blog/index.html">Blog</a></li>
-        <li><a href="/consulta-cnpj">Consulta CNPJ grátis</a></li>
       </ul>
     </div>
   </div>
   <div class="rdp-prof"><strong style="color:#fff">Pra sua profissão:</strong> Bolgest para <a href="medicos.html">Médicos</a>, <a href="dentistas.html">Dentistas</a>, <a href="psicologos.html">Psicólogos</a> e <a href="advogados.html">Advogados</a></div>
   <div class="rdp-base">© 2026 Bolgest · bolgest.com — Todos os direitos reservados. Bolgest é um produto do escritório DANZI &amp; RIBEIRO CONTADORES ASSOCIADOS LTDA sobre a plataforma PJMEI.</div>
 </footer>
-
 <a class="zap" href="https://wa.me/5527988818576?text=Oi!%20Sou%20m%C3%A9dico%20e%20quero%20saber%20mais%20sobre%20o%20Bolgest" aria-label="Chamar no WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.2c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.9 16.9c-.3.8-1.7 1.6-2.3 1.6-.6.1-1.3.3-4.4-.9-3.7-1.5-6-5.3-6.2-5.5-.2-.2-1.5-2-1.5-3.8s1-2.7 1.3-3c.3-.4.7-.5 1-.5h.7c.2 0 .5-.1.8.6.3.8 1.1 2.7 1.2 2.9.1.2.2.4 0 .7-.1.3-.2.4-.4.7l-.6.7c-.2.2-.4.4-.2.8.2.4 1 1.7 2.2 2.7 1.5 1.4 2.8 1.8 3.2 2 .4.2.6.2.9-.1.2-.3 1-1.2 1.3-1.6.3-.4.5-.3.9-.2.4.1 2.2 1 2.6 1.2.4.2.6.3.7.5.1.2.1.9-.2 1.7z"/></svg>
 </a>
-
 <script>
-function brl(v){return v.toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0})}
-function irpfMensal(base){
-  if(base<=2428.80)return 0;
-  if(base<=2826.65)return base*.075-182.16;
-  if(base<=3751.05)return base*.15-394.16;
-  if(base<=4664.68)return base*.225-675.49;
-  return base*.275-908.73;
-}
-var TETO_INSS=8157.41;
-function simplesEfetivo(rbt12,tab){
-  for(var i=0;i<tab.length;i++){if(rbt12<=tab[i][0])return (rbt12*tab[i][1]-tab[i][2])/rbt12}
-  return tab[tab.length-1][1];
-}
-var ANEXO_V=[[180000,.155,0],[360000,.18,4500],[720000,.195,9900],[1800000,.205,17100],[3600000,.23,62100]];
-var ANEXO_III=[[180000,.06,0],[360000,.112,9360],[720000,.135,17640],[1800000,.16,35640],[3600000,.21,125640]];
-function calc(){
-  var f=+document.getElementById('fat').value;
-  document.getElementById('fat-out').textContent=brl(f);
-  var rbt12=f*12;
-  // PF: carnê-leão (IRPF progressivo) + INSS autônomo 20% até o teto
-  var inssPF=Math.min(f,TETO_INSS)*.20;
-  var irPF=irpfMensal(Math.max(0,f-inssPF));
-  var totPF=inssPF+irPF;
-  // PJ Anexo V
-  var totV=f*simplesEfetivo(rbt12,ANEXO_V);
-  // PJ Anexo III com Fator R: pró-labore 28% → INSS 11% + IRPF do pró-labore + DAS anexo III
-  var pl=f*.28;
-  var inssPL=Math.min(pl,TETO_INSS)*.11;
-  var irPL=irpfMensal(Math.max(0,pl-inssPL));
-  var das3=f*simplesEfetivo(rbt12,ANEXO_III);
-  var totR=das3+inssPL+irPL;
-  var res=[['pf',totPF],['v',totV],['r',totR]];
-  res.forEach(function(x){
-    document.getElementById(x[0]+'-imp').textContent=brl(x[1])+'/mês';
-    document.getElementById(x[0]+'-aliq').textContent='alíquota efetiva '+(x[1]/f*100).toFixed(1).replace('.',',')+'%';
-    document.getElementById(x[0]+'-sobra').textContent=brl(f-x[1]);
-  });
-  var vals=res.map(function(x){return x[1]});
-  var min=Math.min.apply(null,vals), max=Math.max.apply(null,vals);
-  res.forEach(function(x){document.getElementById('c-'+x[0]).classList.toggle('win',x[1]===min)});
-  document.getElementById('eco').textContent=brl((max-min)*12);
-}
-document.getElementById('fat').addEventListener('input',calc);
-calc();
+var GA_ID='G-RY2NR9ZSQX';
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
+if(!/X{4}/.test(GA_ID)){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID);}
+document.addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;
+ if(/play\.google/.test(a.href))try{gtag('event','cta_play',{pagina:location.pathname})}catch(x){}
+ if(/wa\.me/.test(a.href))try{gtag('event','cta_whatsapp',{pagina:location.pathname})}catch(x){}});
+</script>
+<script>
+var f=document.getElementById('f'),i=document.getElementById('cnpj'),b=document.getElementById('b'),m=document.getElementById('msg'),r=document.getElementById('res');
+i.addEventListener('input',function(){
+  var v=i.value.replace(/\D/g,'').slice(0,14);
+  i.value=v.replace(/^(\d{2})(\d)/,'$1.$2').replace(/^(\d{2})\.(\d{3})(\d)/,'$1.$2.$3').replace(/\.(\d{3})(\d)/,'.$1/$2').replace(/(\d{4})(\d)/,'$1-$2');
+});
+function brl(v){return (v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
+function dt(s){return s?s.split('-').reverse().join('/'):'—'}
+f.addEventListener('submit',async function(e){
+  e.preventDefault();
+  var n=i.value.replace(/\D/g,'');
+  r.innerHTML='';m.className='';
+  if(n.length!==14){m.className='erro';m.textContent='Digite os 14 números do CNPJ.';return}
+  b.disabled=true;m.textContent='consultando a Receita…';
+  try{
+    var resp=await fetch('https://brasilapi.com.br/api/cnpj/v1/'+n);
+    if(!resp.ok){m.className='erro';m.textContent=(resp.status===404||resp.status===400)?'CNPJ não encontrado na base da Receita. Confira os números.':'Não deu pra consultar agora. Tente de novo em instantes.';return}
+    var d=await resp.json();
+    var ativa=/ATIVA/i.test(d.descricao_situacao_cadastral||'');
+    var end=[d.logradouro,d.numero,d.bairro].filter(Boolean).join(', ');
+    r.innerHTML='<div class="res"><h2>'+esc(d.razao_social||'')+'</h2>'+
+      (d.nome_fantasia?'<div style="color:var(--sub);font-size:.9rem">'+esc(d.nome_fantasia)+'</div>':'')+
+      '<span class="sit '+(ativa?'ativa':'baixada')+'">'+esc(d.descricao_situacao_cadastral||'—')+'</span>'+
+      lin('CNPJ',i.value)+lin('Abertura',dt(d.data_inicio_atividade))+
+      lin('Atividade principal',esc((d.cnae_fiscal||'')+' — '+(d.cnae_fiscal_descricao||'')))+
+      lin('Natureza jurídica',esc(d.descricao_natureza_juridica||'—'))+
+      lin('Porte',esc(d.descricao_porte||'—'))+
+      lin('Simples Nacional',(d.opcao_pelo_simples?'optante':'não optante')+'<span class="tag'+(d.opcao_pelo_simples?'':' n')+'">'+(d.opcao_pelo_simples?'sim':'não')+'</span>')+
+      lin('MEI',(d.opcao_pelo_mei?'enquadrado':'não enquadrado')+'<span class="tag'+(d.opcao_pelo_mei?'':' n')+'">'+(d.opcao_pelo_mei?'sim':'não')+'</span>')+
+      lin('Capital social',brl(d.capital_social))+
+      lin('Endereço',esc(end+' — '+(d.municipio||'')+'/'+(d.uf||'')))+
+      '</div>';
+    m.textContent='dados públicos da Receita Federal, consultados agora';
+    try{gtag('event','consulta_cnpj',{pagina:location.pathname})}catch(x){}
+  }catch(err){m.className='erro';m.textContent='Não deu pra consultar agora. Tente de novo em instantes.'}
+  finally{b.disabled=false}
+});
+function lin(k,v){return '<div class="linha"><span>'+k+'</span><b>'+v+'</b></div>'}
+function esc(s){return String(s).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
 </script>
 </body></html>
